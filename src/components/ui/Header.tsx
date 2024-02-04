@@ -5,13 +5,12 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "./sheet";
 import Logo from "./Logo";
 import { Separator } from "./separator";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -27,8 +26,8 @@ const Header = () => {
               <Logo />
             </SheetTitle>
 
-            <div className="flex flex-col text-[30px] mt-8 gap-4">
-              <SheetClose className="text-left">
+            <div className="flex flex-col text-[30px] mt-12 gap-10">
+              <SheetClose>
                 <div className="flex items-center gap-2">
                   <BrainCogIcon size={35} />
                   <p>Habilidades</p>
@@ -36,7 +35,7 @@ const Header = () => {
                 <Separator />
               </SheetClose>
 
-              <SheetClose className="text-left">
+              <SheetClose>
                 <div className="flex items-center gap-2">
                   <PresentationIcon size={35} />
                   <p>Projetos</p>
@@ -44,7 +43,7 @@ const Header = () => {
                 <Separator />
               </SheetClose>
 
-              <SheetClose className="text-left">
+              <SheetClose>
                 <div className="flex items-center gap-2">
                   <CircleUserIcon size={35} />
                   <p>Sobre mim</p>
@@ -52,7 +51,7 @@ const Header = () => {
                 <Separator />
               </SheetClose>
 
-              <SheetClose className="text-left">
+              <SheetClose>
                 <div className="flex items-center gap-2">
                   <MessageCircleHeart size={35} />
                   <p>Entre em contato</p>
@@ -63,7 +62,9 @@ const Header = () => {
           </SheetContent>
         </Sheet>
 
-        <Logo />
+        <Link href="/">
+          <Logo />
+        </Link>
 
         <Toggle variant="outline">
           {" "}
