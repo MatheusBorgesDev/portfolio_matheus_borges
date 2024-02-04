@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/ui/Header";
+import Footer from "@/components/ui/Footer";
 
 const robotoSlab = Roboto_Slab(
   {
@@ -31,6 +32,7 @@ export default function RootLayout({
         <div className="flex h-full flex-col">
           <Header />
           <div className="flex-1 bg-background">{children}</div>
+          <Footer/>
         </div>
       </body>
     </html>
