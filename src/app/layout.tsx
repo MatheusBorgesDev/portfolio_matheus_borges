@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={robotoSlab.className}>
         <div className="flex h-full flex-col">
           <Header />
           <div className="flex-1 bg-background">{children}</div>
