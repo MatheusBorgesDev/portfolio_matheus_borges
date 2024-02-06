@@ -49,7 +49,7 @@ export default function Home() {
       <div className="flex flex-col gap-10 my-12 py-4">
         <div>
           <p className="text-md opacity-65 font-bold">
-            {"<"}helloWorld{"/>"}
+            {"<"}HelloWorld{"/>"}
           </p>
           <p className="text-[3.5rem] leading-[3rem] font-bold">
             Projetos em destaque.
@@ -94,6 +94,24 @@ export default function Home() {
       </div>
 
       <Separator />
+
+      <div className="flex flex-col gap-10 my-12 py-4">
+        <div>
+          <p className="text-md opacity-65 font-bold">Matheus Borges</p>
+          <p className="text-[3.5rem] leading-[3rem] font-bold">Sobre mim.</p>
+        </div>
+
+        <Image
+          src="https://github.com/MatheusBorgesDev.png"
+          width={0}
+          height={0}
+          className="h-auto w-full rounded-xl"
+          sizes="100vw"
+          alt="Foto de Matheus Borges"
+        />
+
+        <p className="bg-primary-foreground rounded-xl p-2"> &quot;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi asperiores libero repellat modi quidem velit dolore odit! Nobis doloremque libero aperiam praesentium nam iure, amet error? Similique quisquam officiis aspernatur.&quot; </p>
+      </div>
     </div>
   );
 }
