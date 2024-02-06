@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
-import { Poppins, Roboto_Slab } from "next/font/google";
+import { Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
 
-const robotoSlab = Roboto_Slab(
-  {
-    weight: ['300', '500', '700'],
-    subsets: ['latin']
-  })
-
-const poppins = Poppins(
-  {
-    weight: ['300', '500', '700'],
-    subsets: ['latin']
-  })
+const robotoSlab = Roboto_Slab({
+  weight: ["300", "500", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Matheus Borges - Dev front-end",
@@ -29,10 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={robotoSlab.className}>
-        <div className="flex h-full flex-col">
+        <div className="flex h-full flex-col overflow-x-hidden">
           <Header />
           <div className="flex-1 bg-background">{children}</div>
-          <Footer/>
+          <Footer />
         </div>
       </body>
     </html>
