@@ -1,3 +1,4 @@
+import ContactItem from "@/components/ui/ContactItem";
 import ProjectItem from "@/components/ui/ProjectItem";
 import TechnologiesField from "@/components/ui/TechnologiesField";
 import { Button } from "@/components/ui/button";
@@ -9,7 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Separator } from "@/components/ui/separator";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, GithubIcon, MailIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -110,7 +111,71 @@ export default function Home() {
           alt="Foto de Matheus Borges"
         />
 
-        <p className="bg-primary-foreground rounded-xl p-2"> &quot;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi asperiores libero repellat modi quidem velit dolore odit! Nobis doloremque libero aperiam praesentium nam iure, amet error? Similique quisquam officiis aspernatur.&quot; </p>
+        <p className="bg-primary-foreground rounded-xl p-2">
+          {" "}
+          &quot;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+          asperiores libero repellat modi quidem velit dolore odit! Nobis
+          doloremque libero aperiam praesentium nam iure, amet error? Similique
+          quisquam officiis aspernatur.&quot;{" "}
+        </p>
+      </div>
+
+      <div className="flex flex-col gap-10 my-12 py-4">
+        <div>
+          <p className="text-md opacity-65 font-bold">
+            Vamos trabalhar juntos?
+          </p>
+          <p className="text-[3.5rem] leading-[3rem] font-bold">Contato.</p>
+        </div>
+
+        <div>
+          <div className="flex flex-col gap-4 items-center justify-center bg-secondary p-4 rounded-xl">
+            <p>
+              Envie um e-mail, mande uma mensagem pelo WhatsApp ou me chama nas
+              redes sociais:
+            </p>
+
+            <div className="flex items-center gap-4">
+              <ContactItem>
+              <Image
+                  src="/gmail.svg"
+                  alt="Ícone do WhatsApp"
+                  width={50}
+                  height={50}
+                ></Image>
+              </ContactItem>
+
+              <ContactItem>
+              <Image
+                  src="/whatsapp.svg"
+                  alt="Ícone do WhatsApp"
+                  width={50}
+                  height={50}
+                ></Image>
+              </ContactItem>
+
+              <ContactItem>
+              <Image
+                  src="/linkedin.svg"
+                  alt="Ícone do WhatsApp"
+                  width={50}
+                  height={50}
+                ></Image>
+              </ContactItem>
+
+              <ContactItem>
+              <Image
+                  src="/github.svg"
+                  alt="Ícone do WhatsApp"
+                  width={50}
+                  height={50}
+                ></Image>
+              </ContactItem>
+            </div>
+          </div>
+        </div>
+
+        <div></div>
       </div>
     </div>
   );
