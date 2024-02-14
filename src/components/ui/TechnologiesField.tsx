@@ -5,14 +5,16 @@ import { Button } from "./button";
 const TechnologiesField = () => {
   return (
     <>
-      <div className="flex rounded-xl bg-primary-foreground gap-4 flex-wrap p-5 justify-between">
-        <TechnologyItem imgUrl="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-        <TechnologyItem imgUrl="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" />
-        <TechnologyItem imgUrl="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
-        <TechnologyItem imgUrl="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />
+      <div className="flex rounded-xl bg-foreground border-2 border-primary backdrop-blur-sm gap-4 flex-wrap p-5 justify-between shadow-md">
+
+        <TechnologyItem imgUrl="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" techName="React">
+        </TechnologyItem>
+        <TechnologyItem imgUrl="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" techName="Next.JS"/>
+        <TechnologyItem imgUrl="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" techName="TypeScript"/>
+        <TechnologyItem imgUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" techName="Tailwind"/>
 
         <div className="flex w-full items-center justify-center">
-          <Button className="object-fit">
+          <Button variant="secondary" className="text-foreground object-fit">
             <div className="flex gap-2 items-center">
               <p>Veja os projetos</p>
               <ArrowUpRight />

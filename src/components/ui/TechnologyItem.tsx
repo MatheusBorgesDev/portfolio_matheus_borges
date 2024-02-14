@@ -3,11 +3,12 @@ import { Badge } from "./badge";
 
 interface TechnologyItemProps {
   imgUrl: string;
+  techName: string;
 }
 
-const TechnologyItem = ({ imgUrl }: TechnologyItemProps) => {
+const TechnologyItem = ({ imgUrl, techName }: TechnologyItemProps) => {
   return (
-    <Badge className="flex rounded-xl bg-primary-foreground border-none h-[80px] w-[80px] items-center justify-center">
+    <Badge className="flex flex-col rounded-xl bg-transparent h-[80px] w-[80px] items-center justify-center">
       <Image
         src={imgUrl}
         width={0}
@@ -16,6 +17,7 @@ const TechnologyItem = ({ imgUrl }: TechnologyItemProps) => {
         sizes="100vw"
         alt="Foto de Matheus Borges"
       />
+      <p>{techName}</p>
     </Badge>
   );
 };
