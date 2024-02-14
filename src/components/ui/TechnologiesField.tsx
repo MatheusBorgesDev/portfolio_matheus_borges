@@ -5,7 +5,7 @@ import { Button } from "./button";
 const TechnologiesField = () => {
   return (
     <>
-      <div className="flex rounded-xl bg-foreground border-2 border-primary backdrop-blur-sm gap-4 flex-wrap p-5 justify-between shadow-md">
+      <div className="flex rounded-xl bg-foreground border-primary backdrop-blur-sm gap-4 flex-wrap p-5 justify-between shadow-brutal">
 
         <TechnologyItem imgUrl="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" techName="React">
         </TechnologyItem>
