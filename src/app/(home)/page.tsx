@@ -10,6 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Separator } from "@/components/ui/separator";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
@@ -30,6 +31,8 @@ export default function Home() {
         <TechnologiesField />
       </div>
 
+      <Separator/>
+
       <div className="flex flex-col gap-10 px-4 py-20 bg-gradient-to-b from-background to-foreground">
         <div>
           <p className="text-md text-secondary font-bold opacity-80">
@@ -42,8 +45,8 @@ export default function Home() {
 
         <div className="flex flex-col gap-4">
           <Carousel className="rounded-lg">
-            <CarouselContent className="-ml-4 cursor-grab active:cursor-grabbing">
-              <CarouselItem className="basis-3/3 p-5">
+            <CarouselContent className="ml-4 cursor-grab active:cursor-grabbing">
+              <CarouselItem className="basis-3/3 px-5">
                 <ProjectItem
                   imageUrl="https://images.unsplash.com/photo-1609534655988-3f5225c13553?q=80&w=1970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   projectName="My Coffee Place"
@@ -51,7 +54,7 @@ export default function Home() {
                 />
               </CarouselItem>
 
-              <CarouselItem className="basis-3/3 p-5">
+              <CarouselItem className="basis-3/3 px-5">
                 <ProjectItem
                   imageUrl="https://plus.unsplash.com/premium_photo-1674605365723-15e6749630f4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   projectName="Keep Moving!"
@@ -59,7 +62,7 @@ export default function Home() {
                 />
               </CarouselItem>
 
-              <CarouselItem className="basis-3/3 p-5">
+              <CarouselItem className="basis-3/3 px-5">
                 <ProjectItem
                   imageUrl="https://images.unsplash.com/photo-1620287920810-3f5b9746380c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   projectName="Take note"
@@ -79,6 +82,8 @@ export default function Home() {
           </Button>
         </div>
       </div>
+
+      <Separator/>
 
       <div className="flex flex-col gap-10 px-4 py-20 bg-gradient-to-b from-background to-foreground">
         <div>
@@ -107,6 +112,8 @@ export default function Home() {
           quisquam officiis aspernatur.&quot;{" "}
         </p>
       </div>
+
+      <Separator/>
 
       <div className="flex flex-col gap-10 px-4 py-20 bg-gradient-to-b from-background to-foreground">
         <div>
