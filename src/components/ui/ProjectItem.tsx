@@ -10,7 +10,11 @@ interface ProjectItemProps {
   projectDescription: string;
 }
 
-const ProjectItem = ({ projectName, imageUrl, projectDescription }: ProjectItemProps) => {
+const ProjectItem = ({
+  projectName,
+  imageUrl,
+  projectDescription,
+}: ProjectItemProps) => {
   return (
     <Card className="flex flex-col p-1 my-3 min-h-[24rem] w-[20rem] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] bg-transparent rounded-lg">
       <Image
@@ -25,16 +29,18 @@ const ProjectItem = ({ projectName, imageUrl, projectDescription }: ProjectItemP
       <div className="flex flex-col gap-2 w-full p-4 backdrop-blur-md rounded-lg">
         <div>
           <p className="text-secondary font-bold ">{projectName}</p>
-          <p className="text-secondary font-light text-sm">{projectDescription}</p>
+          <p className="text-secondary font-light text-sm">
+            {projectDescription}
+          </p>
         </div>
         <div className="flex gap-8 items-center justify-center">
           <Link href="/" target="_blank">
-            <Button variant="outline">
+            <Button variant="default" className="text-foreground object-fit">
               Acessar <ArrowUpRight />
             </Button>
           </Link>
           <Link href="/">
-            <Button variant="outline">Saber mais</Button>
+            <Button variant="default" className="text-foreground object-fit">Saber mais</Button>
           </Link>
         </div>
       </div>
