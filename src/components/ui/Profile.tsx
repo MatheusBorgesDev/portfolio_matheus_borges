@@ -7,19 +7,19 @@ const Profile = () => {
     <div className="flex flex-col justify-center items-center relative mb-6">
       <div>
         <div className="w-[15rem]">
-            <Image
-              src="https://github.com/MatheusBorgesDev.png"
-              width={0}
-              height={0}
-              className="h-auto w-full rounded-full shadow-brutal"
-              sizes="100vw"
-              alt="Foto de Matheus Borges"
-            />
+          <Image
+            src="https://github.com/MatheusBorgesDev.png"
+            width={0}
+            height={0}
+            className="h-auto w-full rounded-full shadow-brutal"
+            sizes="100vw"
+            alt="Foto de Matheus Borges"
+          />
         </div>
       </div>
 
-      <div className="backdrop-blur-sm rounded-xl absolute bottom-[-1.45rem] shadow-brutal">
-        <div className="flex gap-4 p-2 backdrop-blur-sm rounded-xl">
+      <div className="backdrop-blur-sm bg-transparent rounded-xl absolute bottom-[-1.45rem] shadow-brutal">
+        <div className="flex gap-4 p-2">
           <ContactItem>
             <Image
               src="/gmail.svg"
