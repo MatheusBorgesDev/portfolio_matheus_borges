@@ -14,7 +14,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <Card className="p-3 m-0 border-2 border-background-foreground rounded-t-none w-full">
+    <Card className="p-3 m-0 bg-background border-[.1rem] border-background-foreground rounded-t-none w-full">
       <div className="flex items-center justify-between">
         <Sheet>
           <SheetTrigger>
@@ -28,7 +28,7 @@ const Header = () => {
 
             <div className="flex flex-col text-[30px] mt-12 gap-10">
               <SheetClose>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 text-primary">
                   <BrainCogIcon size={35} />
                   <p>Habilidades</p>
                 </div>
@@ -36,7 +36,7 @@ const Header = () => {
               </SheetClose>
 
               <SheetClose>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 text-primary">
                   <PresentationIcon size={35} />
                   <p>Projetos</p>
                 </div>
@@ -44,7 +44,7 @@ const Header = () => {
               </SheetClose>
 
               <SheetClose>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 text-primary">
                   <CircleUserIcon size={35} />
                   <p>Sobre mim</p>
                 </div>
@@ -52,7 +52,7 @@ const Header = () => {
               </SheetClose>
 
               <SheetClose>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 text-primary">
                   <MessageCircleHeart size={35} />
                   <p>Entre em contato</p>
                 </div>
