@@ -17,7 +17,7 @@ const TechnologyItem = ({ imgUrl, techName }: TechnologyItemProps) => {
         sizes="100vw"
         alt="Foto de Matheus Borges"
       />
-      <p>{techName}</p>
+      <p className="text-secondary">{techName}</p>
     </Badge>
   );
 };
