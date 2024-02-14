@@ -12,7 +12,7 @@ interface ProjectItemProps {
 
 const ProjectItem = ({ projectName, imageUrl, projectDescription }: ProjectItemProps) => {
   return (
-    <Card className="flex flex-col p-1 min-h-[24rem] w-[20rem] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] bg-transparent rounded-lg">
+    <Card className="flex flex-col p-1 my-3 min-h-[24rem] w-[20rem] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] bg-transparent rounded-lg">
       <Image
         src={imageUrl}
         width={0}
