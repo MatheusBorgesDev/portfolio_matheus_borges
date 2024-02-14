@@ -19,7 +19,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div id="header" className="flex flex-col pt-16">
       <div className="flex flex-col gap-10 px-4 py-20 bg-gradient-to-b from-background to-foreground">
         <Profile />
 

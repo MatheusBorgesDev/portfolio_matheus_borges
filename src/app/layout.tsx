@@ -23,8 +23,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={robotoSlab.className}>
         <div className="flex h-full flex-col overflow-x-hidden">
-          <Header />
-          <div className="flex-1 bg-background">{children}</div>
+          <Header/>
+          <div className="flex-1">{children}</div>
           <Footer />
         </div>
       </body>
