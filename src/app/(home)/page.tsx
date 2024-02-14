@@ -1,6 +1,9 @@
+"use client"
+
 import ContactItem from "@/components/ui/ContactItem";
 import Profile from "@/components/ui/Profile";
 import ProjectItem from "@/components/ui/ProjectItem";
+import ScrollUpButton from "@/components/ui/ScrollUpButton";
 import TechnologiesField from "@/components/ui/TechnologiesField";
 import { Button } from "@/components/ui/button";
 import {
@@ -11,7 +14,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Separator } from "@/components/ui/separator";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -31,7 +34,7 @@ export default function Home() {
         <TechnologiesField />
       </div>
 
-      <Separator/>
+      <Separator />
 
       <div className="flex flex-col gap-10 px-4 py-20 bg-gradient-to-b from-background to-foreground">
         <div>
@@ -74,16 +77,16 @@ export default function Home() {
             <CarouselNext />
           </Carousel>
 
-          <Button className="object-fit">
-            <div className="flex gap-2 items-center">
+          <div className="flex gap-2 justify-center">
+            <Button variant="secondary" className="flex gap-2 text-foreground object-fit">
               <p>Acesse todos os projetos</p>
-              <ArrowUpRight />
-            </div>
-          </Button>
+              <ArrowRight />
+            </Button>
+          </div>
         </div>
       </div>
 
-      <Separator/>
+      <Separator />
 
       <div className="flex flex-col gap-10 px-4 py-20 bg-gradient-to-b from-background to-foreground">
         <div>
@@ -113,9 +116,9 @@ export default function Home() {
         </p>
       </div>
 
-      <Separator/>
+      <Separator />
 
-      <div className="flex flex-col gap-10 px-4 py-20 bg-gradient-to-b from-background to-foreground">
+      <div id="about" className="flex flex-col gap-10 px-4 py-20 bg-gradient-to-b from-background to-foreground">
         <div>
           <p className="text-md text-secondary font-bold opacity-80">
             Vamos trabalhar juntos?
@@ -172,7 +175,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div></div>
+        <ScrollUpButton/>
+
+        
       </div>
     </div>
   );
