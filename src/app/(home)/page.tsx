@@ -1,4 +1,5 @@
 import ContactItem from "@/components/ui/ContactItem";
+import Profile from "@/components/ui/Profile";
 import ProjectItem from "@/components/ui/ProjectItem";
 import TechnologiesField from "@/components/ui/TechnologiesField";
 import { Button } from "@/components/ui/button";
@@ -9,50 +10,33 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Separator } from "@/components/ui/separator";
-import { ArrowUpRight, GithubIcon, MailIcon } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col mx-4 gap-8">
-      <div className="flex flex-col gap-10 my-12 py-4">
-        <div className="flex justify-center">
-          <div className="w-[15rem]">
-            <Link href="/about">
-              <Image
-                src="https://github.com/MatheusBorgesDev.png"
-                width={0}
-                height={0}
-                className="h-auto w-full rounded-xl"
-                sizes="100vw"
-                alt="Foto de Matheus Borges"
-              />
-            </Link>
-          </div>
-        </div>
+    <div className="flex flex-col ">
+      <div className="flex flex-col gap-10 px-4 py-20 bg-gradient-to-b from-background to-foreground">
+        <Profile/>
 
         <div>
-          <h1 className="text-md font-bold opacity-65">
+          <h1 className="text-md text-black font-bold opacity-65">
             Olá, Matheus Borges aqui! &#128075;
           </h1>
           <h2 className="text-[3.5rem] text-primary leading-[3rem] font-bold">
             Desenvolvedor front-end.
           </h2>
         </div>
-
         <TechnologiesField />
       </div>
 
-      <Separator />
-
-      <div className="flex flex-col gap-10 my-12 py-4">
+      <div className="flex flex-col gap-10 px-4 py-20 bg-secondary">
         <div>
           <p className="text-md opacity-65 font-bold">
             {"<"}HelloWorld{"/>"}
           </p>
-          <p className="text-[3.5rem] leading-[3rem] font-bold">
+          <p className="text-[3.5rem] text-primary leading-[3rem] font-bold">
             Projetos em destaque.
           </p>
         </div>
@@ -94,12 +78,12 @@ export default function Home() {
         </div>
       </div>
 
-      <Separator />
-
-      <div className="flex flex-col gap-10 my-12 py-4">
+      <div className="flex flex-col gap-10 my-12 px-4 pt-20">
         <div>
           <p className="text-md opacity-65 font-bold">Matheus Borges</p>
-          <p className="text-[3.5rem] leading-[3rem] font-bold">Sobre mim.</p>
+          <p className="text-[3.5rem] text-primary leading-[3rem] font-bold">
+            Sobre mim.
+          </p>
         </div>
 
         <Image
@@ -120,12 +104,14 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="flex flex-col gap-10 my-12 py-4">
+      <div className="flex flex-col gap-10 my-12 px-4 pt-20">
         <div>
           <p className="text-md opacity-65 font-bold">
             Vamos trabalhar juntos?
           </p>
-          <p className="text-[3.5rem] leading-[3rem] font-bold">Contato.</p>
+          <p className="text-[3.5rem] text-primary leading-[3rem] font-bold">
+            Contato.
+          </p>
         </div>
 
         <div>
@@ -137,7 +123,7 @@ export default function Home() {
 
             <div className="flex items-center gap-4">
               <ContactItem>
-              <Image
+                <Image
                   src="/gmail.svg"
                   alt="Ícone do WhatsApp"
                   width={50}
@@ -146,7 +132,7 @@ export default function Home() {
               </ContactItem>
 
               <ContactItem>
-              <Image
+                <Image
                   src="/whatsapp.svg"
                   alt="Ícone do WhatsApp"
                   width={50}
@@ -155,7 +141,7 @@ export default function Home() {
               </ContactItem>
 
               <ContactItem>
-              <Image
+                <Image
                   src="/linkedin.svg"
                   alt="Ícone do WhatsApp"
                   width={50}
@@ -164,7 +150,7 @@ export default function Home() {
               </ContactItem>
 
               <ContactItem>
-              <Image
+                <Image
                   src="/github.svg"
                   alt="Ícone do WhatsApp"
                   width={50}
