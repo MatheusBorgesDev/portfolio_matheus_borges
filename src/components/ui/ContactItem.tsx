@@ -6,7 +6,7 @@ interface ContactItemProps {
 }
 
 const ContactItem: React.FC<ContactItemProps> = ({ children }) => {
-  return <Button className="h-20 w-20">{children}</Button>;
+  return <Button variant="secondary" className="h-auto w-auto p-2 rounded-full">{children}</Button>;
 };
 
 export default ContactItem;
