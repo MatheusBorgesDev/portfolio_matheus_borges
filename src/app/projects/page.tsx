@@ -1,5 +1,4 @@
 import ProjectItem from "@/components/ui/ProjectItem";
-import ScrollUpButton from "@/components/ui/ScrollUpButton";
 
 const Projects = () => {
   return (
