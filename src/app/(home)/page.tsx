@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import ContactItem from "@/components/ui/ContactItem";
 import Profile from "@/components/ui/Profile";
@@ -78,7 +78,10 @@ export default function Home() {
           </Carousel>
 
           <div className="flex gap-2 justify-center">
-            <Button variant="secondary" className="flex gap-2 text-foreground object-fit">
+            <Button
+              variant="secondary"
+              className="flex gap-2 text-foreground object-fit"
+            >
               <p>Acesse todos os projetos</p>
               <ArrowRight />
             </Button>
@@ -98,27 +101,38 @@ export default function Home() {
           </h2>
         </div>
 
-        <Image
-          src="https://github.com/MatheusBorgesDev.png"
-          width={0}
-          height={0}
-          className="h-auto w-full rounded-xl"
-          sizes="100vw"
-          alt="Foto de Matheus Borges"
-        />
+        <div className="flex gap-2">
+          <div className="min-w-[10rem] h-[22rem]">
+            <Image
+              src="https://github.com/MatheusBorgesDev.png"
+              width={0}
+              height={0}
+              className="h-full w-full rounded-xl object-cover shadow-brutal"
+              sizes="100vw"
+              alt="Foto de Matheus Borges"
+            />
+          </div>
 
-        <p className="bg-primary-foreground rounded-xl p-2">
-          {" "}
-          &quot;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-          asperiores libero repellat modi quidem velit dolore odit! Nobis
-          doloremque libero aperiam praesentium nam iure, amet error? Similique
-          quisquam officiis aspernatur.&quot;{" "}
-        </p>
+          <div className="flex min-h-full rounded-xl bg-transparent backdrop-blur-sm gap-4 flex-wrap p-5 justify-between shadow-brutal items-center">
+            <p className="text-secondary">
+              &quot;Há mais ou menos um ano e meio, comecei a dar os primeiros
+              passos no mundo da programação, e desde as primeiras linhas de
+              código, fui descobrindo a minha verdadeira vocação.
+              <br />
+              <br />
+              Hoje, sou apaixonado pela arte de programar e busco a primeira
+              oportunidade para iniciar a minha carreira.&quot;
+            </p>
+          </div>
+        </div>
       </div>
 
       <Separator />
 
-      <div id="about" className="flex flex-col gap-10 px-4 py-20 bg-gradient-to-b from-background to-foreground">
+      <div
+        id="about"
+        className="flex flex-col gap-10 px-4 py-20 bg-gradient-to-b from-background to-foreground"
+      >
         <div>
           <p className="text-md text-secondary font-bold opacity-80">
             Vamos trabalhar juntos?
@@ -175,9 +189,7 @@ export default function Home() {
           </div>
         </div>
 
-        <ScrollUpButton/>
-
-        
+        <ScrollUpButton />
       </div>
     </div>
   );
