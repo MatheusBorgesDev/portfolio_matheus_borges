@@ -13,7 +13,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
+import { Textarea } from "@/components/ui/textarea";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
@@ -131,22 +133,24 @@ export default function Home() {
 
       <div
         id="about"
-        className="flex flex-col gap-10 px-4 py-20 bg-gradient-to-b from-background to-foreground"
+        className="px-4 py-20 bg-gradient-to-b from-background to-foreground"
       >
-        <div>
-          <p className="text-md text-secondary font-bold opacity-80">
-            Vamos trabalhar juntos?
-          </p>
-          <h2 className="text-[3.5rem] text-primary leading-[3rem] font-bold">
-            Contato.
-          </h2>
+        <div className="flex flex-col gap-4">
+          <div>
+            <p className="text-md text-secondary font-bold opacity-80">
+              Vamos trabalhar juntos?
+            </p>
+            <h2 className="text-[3.5rem] text-primary leading-[3rem] font-bold">
+              Contato.
+            </h2>
+          </div>
         </div>
 
-        <div>
-          <div className="flex flex-col gap-4 items-center justify-center bg-secondary p-4 rounded-xl">
-            <p>
+        <div className="flex flex-col rounded-xl bg-transparent backdrop-blur-sm gap-4 flex-wrap my-4 p-5 shadow-brutal ">
+          <div className="flex flex-col gap-1">
+            <p className="text-secondary">
               Envie um e-mail, mande uma mensagem pelo WhatsApp ou me chama nas
-              redes sociais:
+              redes sociais!
             </p>
 
             <div className="flex items-center gap-4">
@@ -154,8 +158,8 @@ export default function Home() {
                 <Image
                   src="/gmail.svg"
                   alt="Ícone do WhatsApp"
-                  width={50}
-                  height={50}
+                  width={20}
+                  height={20}
                 ></Image>
               </ContactItem>
 
@@ -163,8 +167,8 @@ export default function Home() {
                 <Image
                   src="/whatsapp.svg"
                   alt="Ícone do WhatsApp"
-                  width={50}
-                  height={50}
+                  width={20}
+                  height={20}
                 ></Image>
               </ContactItem>
 
@@ -172,8 +176,8 @@ export default function Home() {
                 <Image
                   src="/linkedin.svg"
                   alt="Ícone do WhatsApp"
-                  width={50}
-                  height={50}
+                  width={20}
+                  height={20}
                 ></Image>
               </ContactItem>
 
@@ -181,12 +185,28 @@ export default function Home() {
                 <Image
                   src="/github.svg"
                   alt="Ícone do WhatsApp"
-                  width={50}
-                  height={50}
+                  width={20}
+                  height={20}
                 ></Image>
               </ContactItem>
             </div>
           </div>
+
+          <form action="" className="flex flex-col gap-2 text-secondary">
+            <Input type="text" placeholder="Nome" />
+            <Input type="email" placeholder="E-mail" />
+            <Textarea placeholder="Escreva sua mensagem aqui" />
+
+            <div className="w-full object-fit">
+              <Button
+                variant="secondary"
+                className="flex gap-2 text-foreground object-fit"
+              >
+                <p>Envie sua mensagem</p>
+                <ArrowRight />
+              </Button>
+            </div>
+          </form>
         </div>
 
         <ScrollUpButton />
