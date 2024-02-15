@@ -150,7 +150,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col rounded-xl bg-transparent backdrop-blur-sm gap-4 flex-wrap my-4 p-5 shadow-brutal ">
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-4">
             <p className="text-secondary">
               Envie um e-mail, mande uma mensagem pelo WhatsApp ou me chama nas
               redes sociais!
