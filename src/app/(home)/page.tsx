@@ -136,7 +136,7 @@ export default function Home() {
 
       <div
         id="about"
-        className="px-4 py-20 bg-gradient-to-b from-background to-foreground"
+        className=" flex flex-col gap-8 px-4 py-20 bg-gradient-to-b from-background to-foreground"
       >
         <div className="flex flex-col gap-4">
           <div>
