@@ -18,6 +18,7 @@ import { Separator } from "@/components/ui/separator";
 import { Textarea } from "@/components/ui/textarea";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
             Olá, Matheus Borges aqui! &#128075;
           </h1>
           <h2 className="text-[3.5rem] text-primary leading-[3rem] font-bold">
-            Desenvolvedor front-end.
+            Desenvolvedor <br />front-end.
           </h2>
         </div>
         <TechnologiesField />
@@ -49,7 +50,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <Carousel className="rounded-lg">
+          <Carousel className="rounded-lg shadow-[inset_-12px_-8px_40px_#46464620]">
             <CarouselContent className="ml-4 cursor-grab active:cursor-grabbing">
               <CarouselItem className="basis-3/3 px-5">
                 <ProjectItem
@@ -80,13 +81,15 @@ export default function Home() {
           </Carousel>
 
           <div className="flex gap-2 justify-center">
-            <Button
-              variant="secondary"
-              className="flex gap-2 text-foreground object-fit"
-            >
-              <p>Acesse todos os projetos</p>
-              <ArrowRight />
-            </Button>
+            <Link href="/projects">
+              <Button
+                variant="secondary"
+                className="flex gap-2 text-foreground object-fit"
+              >
+                <p>Acesse todos os projetos</p>
+                <ArrowRight />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -208,8 +211,6 @@ export default function Home() {
             </div>
           </form>
         </div>
-
-        <ScrollUpButton />
       </div>
     </div>
   );
