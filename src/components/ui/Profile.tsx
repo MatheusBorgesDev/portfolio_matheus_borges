@@ -8,7 +8,7 @@ const Profile = () => {
       <div>
         <div className="w-[15rem]">
           <Image
-            src="https://github.com/MatheusBorgesDev.png"
+            src="/profile_image.jpg"
             width={0}
             height={0}
             className="h-auto w-full rounded-full shadow-brutal"
