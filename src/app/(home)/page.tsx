@@ -197,7 +197,7 @@ export default function Home() {
             <Input type="email" placeholder="E-mail" />
             <Textarea placeholder="Escreva sua mensagem aqui" />
 
-            <div className="w-full object-fit">
+            <div className="w-full object-fit pt-2">
               <Button
                 variant="secondary"
                 className="flex gap-2 text-foreground object-fit"
