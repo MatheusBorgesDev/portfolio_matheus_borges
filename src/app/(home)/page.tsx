@@ -49,7 +49,7 @@ export default function Home() {
           </h2>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-8">
           <Carousel className="rounded-lg shadow-[inset_-12px_-8px_40px_#46464620]">
             <CarouselContent className="ml-4 cursor-grab active:cursor-grabbing">
               <CarouselItem className="basis-3/3 px-5">
@@ -80,7 +80,7 @@ export default function Home() {
             <CarouselNext />
           </Carousel>
 
-          <div className="flex gap-2 justify-center">
+          <div className="flex justify-center">
             <Link href="/projects">
               <Button
                 variant="secondary"
