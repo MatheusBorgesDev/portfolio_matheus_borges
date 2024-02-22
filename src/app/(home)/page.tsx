@@ -3,7 +3,6 @@
 import ContactItem from "@/components/ui/ContactItem";
 import Profile from "@/components/ui/Profile";
 import ProjectItem from "@/components/ui/ProjectItem";
-import ScrollUpButton from "@/components/ui/ScrollUpButton";
 import TechnologiesField from "@/components/ui/TechnologiesField";
 import { Button } from "@/components/ui/button";
 import {
