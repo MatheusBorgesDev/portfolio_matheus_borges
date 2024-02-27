@@ -32,7 +32,7 @@ const ProjectItem = ({
         <div>
           <p className="text-secondary font-bold ">{projectName}</p>
           <p className="text-secondary font-light text-sm">
-            {projectDescription} haha
+            {projectDescription}
           </p>
         </div>
         <div className="flex gap-8 items-center justify-center">
