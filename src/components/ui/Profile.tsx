@@ -12,7 +12,7 @@ const Profile = () => {
             width={0}
             height={0}
             className="h-auto w-full rounded-full shadow-brutal"
-            sizes="100vw"
+            sizes="100%"
             alt="Foto de Matheus Borges"
           />
         </div>

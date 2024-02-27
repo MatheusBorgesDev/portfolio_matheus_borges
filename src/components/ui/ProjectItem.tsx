@@ -3,10 +3,14 @@ import { Card } from "./card";
 import { Button } from "./button";
 import Link from "next/link";
 import {
+  ArrowRightIcon,
   ArrowUpRight,
   ArrowUpRightIcon,
   GithubIcon,
   GlobeIcon,
+  PlusCircleIcon,
+  PlusIcon,
+  SearchIcon,
 } from "lucide-react";
 
 interface ProjectItemProps {
@@ -41,6 +45,10 @@ const ProjectItem = ({
             </p>
           </div>
           <div className="flex flex-col gap-2 w-full items-center">
+          <Button className="flex justify-between w-full h-12">
+              <PlusIcon /> Mais detalhes <ArrowRightIcon />{" "}
+            </Button>
+
             <Button className="flex justify-between w-full h-12">
               <GlobeIcon /> Demo <ArrowUpRightIcon />{" "}
             </Button>
