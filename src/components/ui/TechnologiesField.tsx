@@ -6,7 +6,7 @@ import Link from "next/link";
 const TechnologiesField = () => {
   return (
     <>
-      <div className="flex rounded-xl bg-transparent border-primary backdrop-blur-sm gap-4 flex-wrap p-5 justify-between shadow-brutal ">
+      <div className="flex rounded-xl bg-background border-primary backdrop-blur-sm gap-4 flex-wrap p-5 justify-between shadow-brutal ">
         <TechnologyItem
           imgUrl="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
           techName="React"

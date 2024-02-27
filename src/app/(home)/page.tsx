@@ -3,6 +3,7 @@
 import ContactItem from "@/components/ui/ContactItem";
 import Profile from "@/components/ui/Profile";
 import ProjectItem from "@/components/ui/ProjectItem";
+import ScrollUpButton from "@/components/ui/ScrollUpButton";
 import TechnologiesField from "@/components/ui/TechnologiesField";
 import { Button } from "@/components/ui/button";
 import {
@@ -21,8 +22,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div id="header" className="flex flex-col">
-      <div className="flex flex-col gap-10 px-4 py-20 bg-gradient-to-b from-background to-foreground">
+    <div id="header" className="flex flex-col pt-20 bg-bgImg bg-contain">
+      <div className="flex flex-col gap-10 px-4 pb-20">
         <Profile />
 
         <div>
@@ -30,15 +31,14 @@ export default function Home() {
             Olá, Matheus Borges aqui! &#128075;
           </h1>
           <h2 className="text-[3.5rem] text-primary leading-[3rem] font-bold">
-            Desenvolvedor <br />front-end.
+            Desenvolvedor <br />
+            front-end.
           </h2>
         </div>
         <TechnologiesField />
       </div>
 
-      <Separator />
-
-      <div className="flex flex-col gap-10 px-4 py-20 bg-gradient-to-b from-background to-foreground">
+      <div className="flex flex-col gap-10 px-4 py-20">
         <div>
           <p className="text-md text-secondary font-bold opacity-80">
             {"<"}HelloWorld{"/>"}
@@ -49,7 +49,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col gap-8">
-          <Carousel className="rounded-lg shadow-[inset_-12px_-8px_40px_#46464620]">
+          <Carousel className="rounded-lg bg-background shadow-[inset_-12px_-8px_40px_#46464620]">
             <CarouselContent className="ml-4 cursor-grab active:cursor-grabbing">
               <CarouselItem className="basis-3/3 px-5">
                 <ProjectItem
@@ -93,9 +93,7 @@ export default function Home() {
         </div>
       </div>
 
-      <Separator />
-
-      <div className="flex flex-col gap-10 px-4 py-20 bg-gradient-to-b from-background to-foreground">
+      <div className="flex flex-col gap-10 px-4 py-20">
         <div>
           <p className="text-md text-secondary font-bold opacity-80">
             Matheus Borges
@@ -117,7 +115,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex min-h-full rounded-xl bg-transparent backdrop-blur-sm gap-4 flex-wrap p-5 justify-between shadow-brutal items-center">
+          <div className="flex min-h-full rounded-xl bg-background text-justify backdrop-blur-sm gap-4 flex-wrap p-5 justify-between shadow-brutal items-center">
             <p className="text-secondary">
               &quot;Há mais ou menos um ano e meio, comecei a dar os primeiros
               passos no mundo da programação, e desde as primeiras linhas de
@@ -131,12 +129,7 @@ export default function Home() {
         </div>
       </div>
 
-      <Separator />
-
-      <div
-        id="about"
-        className=" flex flex-col gap-8 px-4 py-20 bg-gradient-to-b from-background to-foreground"
-      >
+      <div id="about" className=" flex flex-col gap-8 px-4 pt-20 pb-10">
         <div className="flex flex-col gap-4">
           <div>
             <p className="text-md text-secondary font-bold opacity-80">
@@ -148,7 +141,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col rounded-xl bg-transparent backdrop-blur-sm gap-4 flex-wrap my-4 p-5 shadow-brutal ">
+        <div className="flex flex-col rounded-xl bg-background backdrop-blur-sm gap-4 flex-wrap my-4 p-5 shadow-brutal ">
           <div className="flex flex-col gap-4">
             <p className="text-secondary">
               Envie um e-mail, mande uma mensagem pelo WhatsApp ou me chama nas
@@ -211,6 +204,7 @@ export default function Home() {
           </form>
         </div>
       </div>
+      <ScrollUpButton />
     </div>
   );
 }

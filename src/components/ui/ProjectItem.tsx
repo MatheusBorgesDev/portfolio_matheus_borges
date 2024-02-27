@@ -27,7 +27,7 @@ const ProjectItem = ({
 }: ProjectItemProps) => {
   return (
     <div {...props}>
-      <Card className="flex flex-col border-2 border-gray-500 p-1 my-3 min-h-[24rem] w-[20rem] bg-transparent rounded-lg">
+      <Card className="flex flex-col border-2 border-gray-500 p-1 my-3 min-h-[24rem] w-[20rem] bg-transparent rounded-lg backdrop-blur-md">
         <Image
           src={imageUrl}
           width={0}
@@ -37,7 +37,7 @@ const ProjectItem = ({
           alt="Foto de Matheus Borges"
         />
 
-        <div className="flex flex-col gap-4 w-full p-4 backdrop-blur-md rounded-lg">
+        <div className="flex flex-col gap-4 w-full p-4 rounded-lg">
           <div>
             <p className="text-secondary font-bold ">{projectName}</p>
             <p className="text-secondary font-light text-sm">

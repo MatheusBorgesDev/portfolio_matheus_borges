@@ -3,7 +3,6 @@ import { Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
-import ScrollUpButton from "@/components/ui/ScrollUpButton";
 
 const robotoSlab = Roboto_Slab({
   weight: ["300", "500", "700"],
@@ -23,10 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={robotoSlab.className}>
-        <div className="flex h-full flex-col overflow-x-hidden pt-20 bg-gradient-to-b from-background to-foreground">
-          <Header/>
+        <div className="flex h-full flex-col overflow-x-hidden pt-20 bg-bgImg bg-cover">
+          <Header />
           <div className="flex-1">{children}</div>
-          <ScrollUpButton />
           <Footer />
         </div>
       </body>

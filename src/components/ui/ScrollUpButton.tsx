@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ArrowUp } from "lucide-react";
 import { Button, ButtonProps } from "./button";
@@ -26,7 +26,7 @@ const ScrollUpButton = () => {
   }, []);
 
   return (
-    <div className="flex w-full bg-foreground pb-4 pr-4 text-foreground object-fit justify-end">
+    <div className="flex w-full bg-transparent pr-4 pb-10 text-foreground object-fit justify-end">
       <Button id="scrollUpButton" className="flex text-foreground object-fit">
         <ArrowUp />
       </Button>
