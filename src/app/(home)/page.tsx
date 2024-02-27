@@ -21,7 +21,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div id="header" className="flex flex-col pt-16">
+    <div id="header" className="flex flex-col">
       <div className="flex flex-col gap-10 px-4 py-20 bg-gradient-to-b from-background to-foreground">
         <Profile />
 

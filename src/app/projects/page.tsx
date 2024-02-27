@@ -4,9 +4,9 @@ const Projects = () => {
   return (
     <div
       id="header"
-      className="flex flex-col h-auto gap-10 px-4 py-16 bg-gradient-to-b from-background to-foreground"
+      className="flex flex-col h-auto gap-10 px-4 pt-20 bg-gradient-to-b from-background to-foreground"
     >
-      <div className="pt-20">
+      <div>
         <p className="text-md text-secondary font-bold opacity-80">
           {"<"}Working{"/>"}
         </p>

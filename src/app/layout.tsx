@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={robotoSlab.className}>
-        <div className="flex h-full flex-col overflow-x-hidden">
+        <div className="flex h-full flex-col overflow-x-hidden pt-20 bg-gradient-to-b from-background to-foreground">
           <Header/>
           <div className="flex-1">{children}</div>
           <ScrollUpButton />
