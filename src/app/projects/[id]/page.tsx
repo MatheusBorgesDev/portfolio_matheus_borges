@@ -1,13 +1,9 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
-import {
-  ArrowLeft,
-  ArrowUpRight,
-  ArrowUpRightIcon,
-  GithubIcon,
-  GlobeIcon,
-  Link,
-} from "lucide-react";
+import { ArrowUpRightIcon, GithubIcon, GlobeIcon } from "lucide-react";
 import Image from "next/image";
+import BackButton from "./components/BackButton";
 
 const ProjectDetails = ({ params }: { params: { id: string } }) => {
   const id = params.id;
@@ -24,20 +20,21 @@ const ProjectDetails = ({ params }: { params: { id: string } }) => {
 
   return (
     <div className="flex flex-col px-4 gap-4 text-secondary py-20">
-      <div className="relative rounded-xl">
-        <Image
-          src={projectImg}
-          width={0}
-          height={0}
-          className="h-[20rem] w-full object-cover rounded-lg relative"
-          sizes="100%"
-          alt="Foto fo projeto"
-        />
-        <Link href="/" className="absolute top-4 left-4 z-10">
-          <Button variant="secondary">
-            <ArrowLeft className="text-background" />
-          </Button>
-        </Link>
+      <div className="flex flex-col gap-4">
+        <div className="relative">
+          <Image
+            src={projectImg}
+            width={0}
+            height={0}
+            className="h-[20rem] w-full object-cover rounded-lg"
+            sizes="100%"
+            alt="Foto fo projeto"
+          />
+
+          <div className="absolute z-10 top-4 left-4">
+            <BackButton variant="default" />
+          </div>
+        </div>
       </div>
 
       <div className="flex rounded-xl bg-transparent border-primary backdrop-blur-sm gap-4 flex-wrap p-5 justify-between shadow-brutal">
@@ -94,12 +91,18 @@ const ProjectDetails = ({ params }: { params: { id: string } }) => {
           nostrum aut, nobis cupiditate totam ipsa.
         </p>
 
-        <div className="flex justify-between items-center gap-4 w-full">
-          <Button variant="secondary" className="flex justify-between w-full">
+        <div className="flex flex-col justify-between items-center gap-4 w-full">
+          <Button
+            variant="secondary"
+            className="flex justify-between w-full h-12"
+          >
             <GlobeIcon /> Demo <ArrowUpRightIcon />{" "}
           </Button>
 
-          <Button variant="secondary" className="flex justify-between w-full">
+          <Button
+            variant="secondary"
+            className="flex justify-between w-full h-12"
+          >
             <GithubIcon /> Código <ArrowUpRightIcon />{" "}
           </Button>
         </div>
