@@ -23,7 +23,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <Card className="fixed top-0 left-0 z-10 p-3 bg-background border-[.1rem] border-background-foreground rounded-t-none w-full">
+    <Card className="fixed top-0 left-0 z-20 p-3 bg-background border-[.1rem] border-background-foreground rounded-t-none w-full">
       <div className="flex items-center justify-between">
         <Sheet>
           <SheetTrigger>
