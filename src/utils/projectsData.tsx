@@ -25,6 +25,22 @@ const projectsData = [
   },
 
   {
+    id: "bmi-calculator",
+    name: "BMI Calculator",
+    intro:
+      "An application that captures the user's weight and height to display their BMI.",
+    description: `Project built during classes on the Explorer trail at Rocketseat educational institution.
+
+    The classes aimed to use DOM and ES Modules (EcmaScript 6 - ES6).
+    
+    Introducing and reinforcing knowledge about HTML, CSS, JavaScript, DOM, Node, events, code refactoring and JS modules.`,
+    images: ["bmi-calculator-img1.png", "bmi-calculator-img2.png"],
+    techs: ["HTML", "CSS", "JS"],
+    demoLink: "https://matheusborgesdev.github.io/Calculadora-de-IMC",
+    gitLink: "https://github.com/MatheusBorgesDev/Calculadora-de-IMC",
+  },
+
+  {
     id: "timer2",
     name: "Timer 2.0",
     intro: "Program your alarm, with different ambient sound options.",
@@ -40,6 +56,19 @@ const projectsData = [
   },
 
   {
+    id: "fortune-cookie",
+    name: "Fortune Cookie",
+    intro: "An application to generate random phrases when user clicks",
+    description: `Project built during classes on the Explorer trail at Rocketseat educational institution.
+
+    The classes aimed to use DOM in JavaScript, introducing knowledge about node, events and callback functions.`,
+    images: ["fortune-cookie-img1.png", "fortune-cookie-img2.png"],
+    techs: ["HTML", "CSS", "JS"],
+    demoLink: "https://matheusborgesdev.github.io/Fortune-Cookie",
+    gitLink: "https://github.com/MatheusBorgesDev/Fortune-Cookie",
+  },
+
+  {
     id: "timer",
     name: "Timer",
     intro: "An alarm clock that can be timed by the user.",
@@ -48,23 +77,10 @@ const projectsData = [
     The classes aimed to use DOM and ES Modules (EcmaScript 6 - ES6) to build an alarm clock that can have its time programmed by the user. We also work with the insertion of audio in the application.
     
     We reinforce knowledge about HTML, CSS, JavaScript, DOM, node, events, code refactoring and separating JS into modules.`,
-    images: ["timer2-img1.png", "timer2-img2.png"],
+    images: ["timer-img1.png", "timer-img2.png"],
     techs: ["HTML", "CSS", "JaVaScript"],
     demoLink: "https://matheusborgesdev.github.io/Timer",
     gitLink: "https://github.com/MatheusBorgesDev/Timer",
-  },
-
-  {
-    id: "space-cream",
-    name: "Space Cream",
-    intro: "One page template for an ice cream shop",
-    description: `Project built during classes on the Explorer trail at Rocketseat educational institution.
-
-    The challenge was to create all the HTML and CSS from a FIGMA model, improving knowledge about display grid, responsiveness, mobile first, transitions, transformations and animations with CSS.`,
-    images: ["space-cream-img1.png", "space-cream-img2.png"],
-    techs: ["HTML", "CSS"],
-    demoLink: "https://matheusborgesdev.github.io/Space-Cream",
-    gitLink: "https://github.com/MatheusBorgesDev/Space-Cream",
   },
 
   {
@@ -97,6 +113,19 @@ const projectsData = [
   },
 
   {
+    id: "space-cream",
+    name: "Space Cream",
+    intro: "One page template for an ice cream shop",
+    description: `Project built during classes on the Explorer trail at Rocketseat educational institution.
+
+    The challenge was to create all the HTML and CSS from a FIGMA model, improving knowledge about display grid, responsiveness, mobile first, transitions, transformations and animations with CSS.`,
+    images: ["space-cream-img1.png", "space-cream-img2.png"],
+    techs: ["HTML", "CSS"],
+    demoLink: "https://matheusborgesdev.github.io/Space-Cream",
+    gitLink: "https://github.com/MatheusBorgesDev/Space-Cream",
+  },
+
+  {
     id: "rocket-sect",
     name: "RocketSect",
     intro: "A homepage template for a security company.",
@@ -109,34 +138,6 @@ const projectsData = [
     gitLink: "https://github.com/MatheusBorgesDev/Rocket-Sect",
   },
 
-  {
-    id: "bmi-calculator",
-    name: "BMI Calculator",
-    intro:
-      "An application that captures the user's weight and height to display their BMI.",
-    description: `Project built during classes on the Explorer trail at Rocketseat educational institution.
-
-    The classes aimed to use DOM and ES Modules (EcmaScript 6 - ES6).
-    
-    Introducing and reinforcing knowledge about HTML, CSS, JavaScript, DOM, Node, events, code refactoring and JS modules.`,
-    images: ["bmi-calculator-img1.png", "bmi-calculator-img2.png"],
-    techs: ["HTML", "CSS", "JS"],
-    demoLink: "https://matheusborgesdev.github.io/Calculadora-de-IMC",
-    gitLink: "https://github.com/MatheusBorgesDev/Calculadora-de-IMC",
-  },
-
-  {
-    id: "fortune-cookie",
-    name: "Fortune Cookie",
-    intro: "An application to generate random phrases when user clicks",
-    description: `Project built during classes on the Explorer trail at Rocketseat educational institution.
-
-    The classes aimed to use DOM in JavaScript, introducing knowledge about node, events and callback functions.`,
-    images: ["fortune-cookie-img1.png", "fortune-cookie-img2.png"],
-    techs: ["HTML", "CSS", "JS"],
-    demoLink: "https://matheusborgesdev.github.io/Fortune-Cookie",
-    gitLink: "https://github.com/MatheusBorgesDev/Fortune-Cookie",
-  },
 ];
 
 export default projectsData;
