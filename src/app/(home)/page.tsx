@@ -14,15 +14,15 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Input } from "@/components/ui/input";
-import { Separator } from "@/components/ui/separator";
 import { Textarea } from "@/components/ui/textarea";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import projectsData from "@/utils/projectsData";
 
 export default function Home() {
   return (
-    <div id="header" className="flex flex-col pt-20 bg-bgImg bg-contain">
+    <div id="header" className="flex flex-col pt-20 bg-bgImg bg-cover">
       <div className="flex flex-col gap-10 px-4 pb-20">
         <Profile />
 
@@ -51,29 +51,22 @@ export default function Home() {
         <div className="flex flex-col gap-8">
           <Carousel className="rounded-lg bg-background shadow-[inset_-12px_-8px_40px_#46464620]">
             <CarouselContent className="ml-4 cursor-grab active:cursor-grabbing">
-              <CarouselItem className="basis-3/3 px-5">
-                <ProjectItem
-                  imageUrl="https://images.unsplash.com/photo-1609534655988-3f5225c13553?q=80&w=1970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  projectName="My Coffee Place"
-                  projectDescription="Peça seu café de forma fácil."
-                />
-              </CarouselItem>
 
-              <CarouselItem className="basis-3/3 px-5">
-                <ProjectItem
-                  imageUrl="https://plus.unsplash.com/premium_photo-1674605365723-15e6749630f4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  projectName="Keep Moving!"
-                  projectDescription="Sua vida sempre em movimento."
-                />
-              </CarouselItem>
+              {projectsData.map((project) => (
+                <CarouselItem key={project.id} className="basis-3/3 px-5">
+                  
+                  <ProjectItem project={{
+                    id: project.id,
+                    name: project.name,
+                    intro: project.intro,
+                    images: [project.images[0]],
+                    demoLink: project.demoLink,
+                    gitLink: project.gitLink,
+                  }} />
 
-              <CarouselItem className="basis-3/3 px-5">
-                <ProjectItem
-                  imageUrl="https://images.unsplash.com/photo-1620287920810-3f5b9746380c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  projectName="Take note"
-                  projectDescription="Anote o que quiser, quando quiser!"
-                />
-              </CarouselItem>
+                </CarouselItem>
+              ))}
+
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
@@ -115,7 +108,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex min-h-full rounded-xl bg-background text-justify backdrop-blur-sm gap-4 flex-wrap p-5 justify-between shadow-brutal items-center">
+          <div className="flex min-h-full rounded-xl bg-transparent text-justify backdrop-blur-lg gap-4 flex-wrap p-5 justify-between shadow-brutal items-center">
             <p className="text-secondary">
               &quot;Há mais ou menos um ano e meio, comecei a dar os primeiros
               passos no mundo da programação, e desde as primeiras linhas de
@@ -141,7 +134,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col rounded-xl bg-background backdrop-blur-sm gap-4 flex-wrap my-4 p-5 shadow-brutal ">
+        <div className="flex flex-col rounded-xl bg-transparent backdrop-blur-lg gap-4 flex-wrap my-4 p-5 shadow-brutal ">
           <div className="flex flex-col gap-4">
             <p className="text-secondary">
               Envie um e-mail, mande uma mensagem pelo WhatsApp ou me chama nas
