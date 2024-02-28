@@ -4,7 +4,7 @@ import projectsData from "@/utils/projectsData";
 
 const Projects = () => {
   return (
-    <div id="header" className="flex flex-col pt-20 bg-bgImg bg-cover bg-[90%]">
+    <div id="header" className="flex flex-col pt-20 bg-bgLight bg-contain">
       <div className="flex flex-col gap-10 px-4 pb-10">
         <div>
           <p className="text-md text-secondary font-bold opacity-80">

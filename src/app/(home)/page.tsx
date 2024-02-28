@@ -22,7 +22,7 @@ import projectsData from "@/utils/projectsData";
 
 export default function Home() {
   return (
-    <div id="header" className="flex flex-col pt-20 bg-bgImg bg-cover">
+    <div id="header" className="flex flex-col pt-20 bg-bgLight bg-contain">
       <div className="flex flex-col gap-10 px-4 pb-20">
         <Profile />
 
