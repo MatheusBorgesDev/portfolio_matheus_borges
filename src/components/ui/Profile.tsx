@@ -1,10 +1,9 @@
-import Link from "next/link";
 import Image from "next/image";
-import ContactItem from "./ContactItem";
+import Contacts from "./Contacts";
 
 const Profile = () => {
   return (
-    <div className="flex flex-col justify-center items-center relative mb-6">
+    <div className="flex flex-col justify-center items-center relative mb-12">
       <div>
         <div className="w-[15rem]">
           <Image
@@ -18,44 +17,8 @@ const Profile = () => {
         </div>
       </div>
 
-      <div className="backdrop-blur-sm bg-transparent rounded-xl absolute bottom-[-1.45rem] shadow-brutal">
-        <div className="flex gap-4 p-2">
-          <ContactItem>
-            <Image
-              src="/gmail.svg"
-              alt="Ícone do WhatsApp"
-              width={20}
-              height={20}
-            ></Image>
-          </ContactItem>
-
-          <ContactItem>
-            <Image
-              src="/whatsapp.svg"
-              alt="Ícone do WhatsApp"
-              width={20}
-              height={20}
-            ></Image>
-          </ContactItem>
-
-          <ContactItem>
-            <Image
-              src="/linkedin.svg"
-              alt="Ícone do WhatsApp"
-              width={20}
-              height={20}
-            ></Image>
-          </ContactItem>
-
-          <ContactItem>
-            <Image
-              src="/github.svg"
-              alt="Ícone do WhatsApp"
-              width={20}
-              height={20}
-            ></Image>
-          </ContactItem>
-        </div>
+      <div className="backdrop-blur-sm bg-transparent rounded-xl absolute bottom-[-2.5rem] shadow-brutal p-2">
+        <Contacts/>
       </div>
     </div>
   );

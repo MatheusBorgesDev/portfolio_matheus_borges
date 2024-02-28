@@ -1,6 +1,5 @@
 "use client";
 
-import ContactItem from "@/components/ui/ContactItem";
 import Profile from "@/components/ui/Profile";
 import ProjectItem from "@/components/ui/ProjectItem";
 import ScrollUpButton from "@/components/ui/ScrollUpButton";
@@ -19,6 +18,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import projectsData from "@/utils/projectsData";
+import Contacts from "@/components/ui/Contacts";
 
 export default function Home() {
   return (
@@ -51,22 +51,20 @@ export default function Home() {
         <div className="flex flex-col gap-8">
           <Carousel className="rounded-lg bg-background shadow-[inset_-12px_-8px_40px_#46464620]">
             <CarouselContent className="ml-4 cursor-grab active:cursor-grabbing">
-
               {projectsData.map((project) => (
                 <CarouselItem key={project.id} className="basis-3/3 px-5">
-                  
-                  <ProjectItem project={{
-                    id: project.id,
-                    name: project.name,
-                    intro: project.intro,
-                    images: [project.images[0]],
-                    demoLink: project.demoLink,
-                    gitLink: project.gitLink,
-                  }} />
-
+                  <ProjectItem
+                    project={{
+                      id: project.id,
+                      name: project.name,
+                      intro: project.intro,
+                      images: [project.images[0]],
+                      demoLink: project.demoLink,
+                      gitLink: project.gitLink,
+                    }}
+                  />
                 </CarouselItem>
               ))}
-
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
@@ -141,43 +139,7 @@ export default function Home() {
               redes sociais!
             </p>
 
-            <div className="flex items-center gap-4">
-              <ContactItem>
-                <Image
-                  src="/gmail.svg"
-                  alt="Ícone do WhatsApp"
-                  width={20}
-                  height={20}
-                ></Image>
-              </ContactItem>
-
-              <ContactItem>
-                <Image
-                  src="/whatsapp.svg"
-                  alt="Ícone do WhatsApp"
-                  width={20}
-                  height={20}
-                ></Image>
-              </ContactItem>
-
-              <ContactItem>
-                <Image
-                  src="/linkedin.svg"
-                  alt="Ícone do WhatsApp"
-                  width={20}
-                  height={20}
-                ></Image>
-              </ContactItem>
-
-              <ContactItem>
-                <Image
-                  src="/github.svg"
-                  alt="Ícone do WhatsApp"
-                  width={20}
-                  height={20}
-                ></Image>
-              </ContactItem>
-            </div>
+            <Contacts />
           </div>
 
           <form action="" className="flex flex-col gap-2 text-secondary">

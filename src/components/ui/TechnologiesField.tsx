@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRightIcon } from "lucide-react";
 import TechnologyItem from "./TechnologyItem";
 import { Button } from "./button";
 import Link from "next/link";
@@ -30,7 +30,7 @@ const TechnologiesField = () => {
               <Link href="/projects">
                 <div className="flex gap-2 items-center">
                   <p>Veja os projetos</p>
-                  <ArrowUpRight />
+                  <ArrowRightIcon />
                 </div>
               </Link>
             </Button>
