@@ -19,7 +19,7 @@ const projectsData = [
     Reinforcing knowledge about HTML, CSS, JavaScript, DOM, node, events, code refactoring, clean code, accessibility and JS modules.`,
     images: ["gitfav-img1.png", "gitfav-img2.png"],
 
-    techs: ["HTML", "CSS", "JaVaScript"],
+    techs: ["html", "css", "javascript"],
     demoLink: "https://matheusborgesdev.github.io/GitFav-Bookmark-GitHub-users",
     gitLink: "https://github.com/MatheusBorgesDev/GitFav-Bookmark-GitHub-users",
   },
@@ -35,7 +35,7 @@ const projectsData = [
     
     Introducing and reinforcing knowledge about HTML, CSS, JavaScript, DOM, Node, events, code refactoring and JS modules.`,
     images: ["bmi-calculator-img1.png", "bmi-calculator-img2.png"],
-    techs: ["HTML", "CSS", "JS"],
+    techs: ["html", "css", "javascript"],
     demoLink: "https://matheusborgesdev.github.io/Calculadora-de-IMC",
     gitLink: "https://github.com/MatheusBorgesDev/Calculadora-de-IMC",
   },
@@ -50,7 +50,7 @@ const projectsData = [
     
     We reinforce knowledge about HTML, CSS, JavaScript, DOM, node, events, code refactoring, clean code and separating JS into modules.`,
     images: ["timer2-img1.png", "timer2-img2.png"],
-    techs: ["HTML", "CSS", "JaVaScript"],
+    techs: ["html", "css", "javascript"],
     demoLink: "https://matheusborgesdev.github.io/Timer-2.0",
     gitLink: "https://github.com/MatheusBorgesDev/Timer-2.0",
   },
@@ -63,7 +63,7 @@ const projectsData = [
 
     The classes aimed to use DOM in JavaScript, introducing knowledge about node, events and callback functions.`,
     images: ["fortune-cookie-img1.png", "fortune-cookie-img2.png"],
-    techs: ["HTML", "CSS", "JS"],
+    techs: ["html", "css", "javascript"],
     demoLink: "https://matheusborgesdev.github.io/Fortune-Cookie",
     gitLink: "https://github.com/MatheusBorgesDev/Fortune-Cookie",
   },
@@ -78,21 +78,21 @@ const projectsData = [
     
     We reinforce knowledge about HTML, CSS, JavaScript, DOM, node, events, code refactoring and separating JS into modules.`,
     images: ["timer-img1.png", "timer-img2.png"],
-    techs: ["HTML", "CSS", "JaVaScript"],
+    techs: ["html", "css", "javascript"],
     demoLink: "https://matheusborgesdev.github.io/Timer",
     gitLink: "https://github.com/MatheusBorgesDev/Timer",
   },
 
   {
     id: "game-stream-fav",
-    name: "My favorite games and streamers",
+    name: "Games & Streams",
     intro:
       "A website template to highlight the user's favorite games and streamers",
     description: `Project built during the Rocketseat educational institution's Next Level event.
 
     The classes aimed to build the application's HTML and CSS from a Figma model.`,
     images: ["game-stream-fav-img1.png"],
-    techs: ["HTML", "CSS"],
+    techs: ["html", "css"],
     demoLink:
       "https://matheusborgesdev.github.io/My-favorite-games-and-streamers",
     gitLink:
@@ -107,7 +107,7 @@ const projectsData = [
 
     The classes had the objective of building the application's HTML and CSS from a Figma model, with emphasis on the styling of the input and checkbox fields.`,
     images: ["advanced-form-img1.png"],
-    techs: ["HTML", "CSS"],
+    techs: ["html", "css"],
     demoLink: "https://matheusborgesdev.github.io/Advanced-form",
     gitLink: "https://github.com/MatheusBorgesDev/Advanced-form",
   },
@@ -120,7 +120,7 @@ const projectsData = [
 
     The challenge was to create all the HTML and CSS from a FIGMA model, improving knowledge about display grid, responsiveness, mobile first, transitions, transformations and animations with CSS.`,
     images: ["space-cream-img1.png", "space-cream-img2.png"],
-    techs: ["HTML", "CSS"],
+    techs: ["html", "css"],
     demoLink: "https://matheusborgesdev.github.io/Space-Cream",
     gitLink: "https://github.com/MatheusBorgesDev/Space-Cream",
   },
@@ -133,11 +133,10 @@ const projectsData = [
 
     The classes aimed to build the application's HTML and CSS from a Figma model.`,
     images: ["rocket-sect-img1.png"],
-    techs: ["HTML", "CSS"],
+    techs: ["html", "css"],
     demoLink: "https://matheusborgesdev.github.io/Rocket-Sect",
     gitLink: "https://github.com/MatheusBorgesDev/Rocket-Sect",
   },
-
 ];
 
 export default projectsData;

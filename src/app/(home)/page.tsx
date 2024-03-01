@@ -59,6 +59,7 @@ export default function Home() {
                       name: project.name,
                       intro: project.intro,
                       images: [project.images[0]],
+                      techs: project.techs,
                       demoLink: project.demoLink,
                       gitLink: project.gitLink,
                     }}

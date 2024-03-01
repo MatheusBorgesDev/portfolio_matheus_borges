@@ -38,50 +38,26 @@ const ProjectDetails = ({ params }: { params: { id: string } }) => {
       </div>
 
       <div className="flex rounded-xl bg-transparent border-primary backdrop-blur-sm gap-4 flex-wrap p-5 justify-between shadow-brutal">
-        <div className="flex w-full justify-between items-center">
-          <h1 className="text-4xl text-primary leading-[3rem] font-bold">
-            {project?.name}
-          </h1>
-          <div className="flex gap-2">
-            <Image
-              src={imgTechUrl}
-              width={0}
-              height={0}
-              className="h-auto w-[2.5rem] rounded-xl"
-              sizes="100vw"
-              alt="Ícone de tecnologia"
-            />
-
-            <Image
-              src={imgTechUrl}
-              width={0}
-              height={0}
-              className="h-auto w-[2.5rem] rounded-xl"
-              sizes="100vw"
-              alt="Ícone de tecnologia"
-            />
-
-            <Image
-              src={imgTechUrl}
-              width={0}
-              height={0}
-              className="h-auto w-[2.5rem] rounded-xl"
-              sizes="100vw"
-              alt="Ícone de tecnologia"
-            />
-
-            <Image
-              src={imgTechUrl}
-              width={0}
-              height={0}
-              className="h-auto w-[2.5rem] rounded-xl"
-              sizes="100vw"
-              alt="Ícone de tecnologia"
-            />
-          </div>
-        </div>
-
         <div className="flex flex-col gap-4">
+          <h1 className="text-4xl text-primary leading-[3rem] font-bold">
+            <div className="flex w-full justify-between items-center">
+              {project?.name}
+              <div className="flex gap-2">
+                {project?.techs.map((tech) => (
+                  <Image
+                    key={tech}
+                    src={`/${tech}.png`}
+                    width={0}
+                    height={0}
+                    className="h-auto w-[2.5rem] rounded-xl"
+                    sizes="100vw"
+                    alt="Ícone de tecnologia"
+                  />
+                ))}
+              </div>
+            </div>
+          </h1>
+
           <h2 className="font-bold text-lg">{project?.intro}</h2>
 
           <p className="text-md opacity-80">{project?.description}</p>

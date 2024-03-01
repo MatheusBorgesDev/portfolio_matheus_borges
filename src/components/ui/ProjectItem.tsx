@@ -16,14 +16,14 @@ interface ProjectItemProps {
     name: string;
     intro: string;
     images: string[];
-    techs?: string[];
+    techs: string[];
     demoLink: string;
     gitLink: string;
   };
 }
 
 const ProjectItem = ({ project }: ProjectItemProps) => {
-  const { id, name, intro, images, demoLink, gitLink } = project;
+  const { id, name, intro, images, techs, demoLink, gitLink } = project;
 
   return (
     <div>
@@ -38,9 +38,29 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
         />
 
         <div className="flex flex-col gap-4 w-full p-4 rounded-lg">
-          <div>
-            <p className="text-secondary font-bold ">{name}</p>
-            <p className="text-secondary font-light w-full text-sm truncate">{intro}</p>
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center justify-between">
+              <p className="text-secondary font-bold text-xl">{name}</p>
+
+              {techs && Array.isArray(techs) && (
+                <div className="flex flex-wrap">
+                  {techs.map((tech) => (
+                    <Image
+                      key={tech}
+                      src={`/${tech}.png`}
+                      width={0}
+                      height={0}
+                      className="h-auto w-[2rem] rounded-xl"
+                      sizes="100vw"
+                      alt="Ícone de tecnologia"
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+            <p className="text-secondary font-light w-full text-sm truncate">
+              {intro}
+            </p>
           </div>
           <div className="flex flex-col gap-2 w-full items-center">
             <Button className="w-full h-12">
