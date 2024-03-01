@@ -42,7 +42,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
             <div className="flex items-center justify-between">
               <p className="text-secondary font-bold text-xl">{name}</p>
 
-              {techs && Array.isArray(techs) && (
+              {Array.isArray(techs) && (
                 <div className="flex flex-wrap">
                   {techs.map((tech) => (
                     <Image
