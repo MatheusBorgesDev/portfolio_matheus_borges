@@ -2,7 +2,7 @@
 
 import Profile from "@/components/ui/Profile";
 import ProjectItem from "@/components/ui/ProjectItem";
-import ScrollUpButton from "@/components/ui/ScrollUpButton";
+import ScrollButton from "@/components/ui/ScrollButton";
 import TechnologiesField from "@/components/ui/TechnologiesField";
 import { Button } from "@/components/ui/button";
 import {
@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/carousel";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUp } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import projectsData from "@/utils/projectsData";
@@ -35,10 +35,10 @@ export default function Home() {
             front-end.
           </h2>
         </div>
-        <TechnologiesField />
+        <TechnologiesField id="#technologies" />
       </div>
 
-      <div className="flex flex-col gap-10 px-4 py-20">
+      <div id="highlight-projects" className="flex flex-col gap-10 px-4 py-20">
         <div>
           <p className="text-md text-secondary font-bold opacity-80">
             {"<"}HelloWorld{"/>"}
@@ -85,7 +85,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-10 px-4 py-20">
+      <div id="about-me" className="flex flex-col gap-10 px-4 py-20">
         <div>
           <p className="text-md text-secondary font-bold opacity-80">
             Matheus Borges
@@ -121,7 +121,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="about" className=" flex flex-col gap-8 px-4 pt-20 pb-10">
+      <div id="contact" className=" flex flex-col gap-8 px-4 pt-20 pb-10">
         <div className="flex flex-col gap-4">
           <div>
             <p className="text-md text-secondary font-bold opacity-80">
@@ -160,7 +160,9 @@ export default function Home() {
           </form>
         </div>
       </div>
-      <ScrollUpButton />
+      <ScrollButton pageElement="header">
+        <ArrowUp/>
+      </ScrollButton>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import ProjectItem from "@/components/ui/ProjectItem";
-import ScrollUpButton from "@/components/ui/ScrollUpButton";
+import ScrollButton from "@/components/ui/ScrollButton";
 import projectsData from "@/utils/projectsData";
 
 const Projects = () => {
@@ -16,26 +16,23 @@ const Projects = () => {
         </div>
 
         <div className="flex gap-8 flex-wrap justify-center">
-
           {projectsData.map((project) => (
-            <ProjectItem 
-              key={project.id} 
-                project={{
+            <ProjectItem
+              key={project.id}
+              project={{
                 id: project.id,
                 name: project.name,
                 intro: project.intro,
                 images: [project.images[0]],
                 techs: project.techs,
                 demoLink: project.demoLink,
-                gitLink: project.gitLink
-              }}              
-          />
-          ))
-        }
-
+                gitLink: project.gitLink,
+              }}
+            />
+          ))}
         </div>
       </div>
-      <ScrollUpButton />
+      <ScrollButton />
     </div>
   );
 };
