@@ -3,10 +3,14 @@ import TechnologyItem from "./TechnologyItem";
 import { Button } from "./button";
 import Link from "next/link";
 
-const TechnologiesField = () => {
+interface TechnologiesFieldProps {
+  id: string;
+}
+
+const TechnologiesField = ({id}: TechnologiesFieldProps) => {
   return (
     <>
-      <div className="bg-bgImg bg-contain">
+      <div id={id} className="bg-bgImg bg-contain">
         <div className="flex rounded-xl border-primary backdrop-blur-md gap-4 flex-wrap p-5 justify-between shadow-brutal ">
           <TechnologyItem
             imgUrl="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
