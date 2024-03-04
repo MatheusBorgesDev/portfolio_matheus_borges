@@ -1,75 +1,72 @@
 "use client";
 
 import {
-  BrainCogIcon,
   CircleUserIcon,
+  HomeIcon,
   MenuIcon,
   MessageCircleHeart,
   PresentationIcon,
   SunIcon,
+  XIcon,
 } from "lucide-react";
 import { Card } from "./card";
 import { Toggle } from "./toggle";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetTitle,
-  SheetTrigger,
-} from "./sheet";
 import Logo from "./Logo";
-import { Separator } from "./separator";
 import Link from "next/link";
+import React, { useState } from "react";
+import ScrollLink from "./ScrollLink";
+import { Separator } from "./separator";
+import { Button } from "./button";
 
 const Header = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
   return (
     <Card className="fixed top-0 left-0 z-20 p-3 bg-background border-[.1rem] border-background-foreground rounded-t-none w-full">
       <div className="flex items-center justify-between">
-        <Sheet>
-          <SheetTrigger>
-            {" "}
-            <MenuIcon />{" "}
-          </SheetTrigger>
-          <SheetContent className="w-full" side="left">
-            <SheetTitle className="text-center mt-8">
-              <Logo />
-            </SheetTitle>
+        <button onClick={toggleMenu}>
+          {!isMenuOpen ? <MenuIcon /> : <XIcon />}
+        </button>
 
-            <div className="flex flex-col text-[30px] mt-12 gap-10">
-              <SheetClose>
-                <div className="flex items-center gap-2 text-primary">
-                  <BrainCogIcon size={35} />
-                  <p className="text-secondary">Habilidades</p>
-                </div>
-                <Separator />
-              </SheetClose>
+        {isMenuOpen && (
+          <div
+            onClick={toggleMenu}
+            className="w-full bg-background rounded-b-lg border border-gray-300 absolute top-[4.5rem] left-0 shadow-lg"
+          >
+            <Link href="/" onClick={toggleMenu}>
+              <Button
+                variant="link"
+                className="flex w-full text-lg gap-4 items-center justify-start my-2"
+              >
+                <HomeIcon /> Home
+              </Button>
+            </Link>
 
-              <SheetClose>
-                <div className="flex items-center gap-2 text-primary">
-                  <PresentationIcon size={35} />
-                  <p className="text-secondary">Projetos</p>
-                </div>
-                <Separator />
-              </SheetClose>
+            <Separator />
 
-              <SheetClose>
-                <div className="flex items-center gap-2 text-primary">
-                  <CircleUserIcon size={35} />
-                  <p className="text-secondary">Sobre mim</p>
-                </div>
-                <Separator />
-              </SheetClose>
+            <ScrollLink pageElement={"projects"}>
+              <PresentationIcon /> Projetos
+            </ScrollLink>
 
-              <SheetClose>
-                <div className="flex items-center gap-2 text-primary">
-                  <MessageCircleHeart size={35} />
-                  <p className="text-secondary">Entre em contato</p>
-                </div>
-                <Separator />
-              </SheetClose>
-            </div>
-          </SheetContent>
-        </Sheet>
+            <Separator />
+
+            <ScrollLink pageElement={"about-me"}>
+              <CircleUserIcon /> Sobre mim
+            </ScrollLink>
+
+            <Separator />
+
+            <ScrollLink pageElement={"contact"}>
+              <MessageCircleHeart /> Contato
+            </ScrollLink>
+
+            <Separator />
+          </div>
+        )}
 
         <Link href="/">
           <Logo />
