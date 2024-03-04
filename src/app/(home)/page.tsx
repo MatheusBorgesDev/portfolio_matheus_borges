@@ -23,7 +23,7 @@ import Contacts from "@/components/ui/Contacts";
 export default function Home() {
   return (
     <div id="header" className="flex flex-col pt-20 bg-bgLight bg-contain">
-      <div className="flex flex-col gap-10 px-4 pb-20">
+      <div id="profile" className="flex flex-col gap-10 px-4 pb-20">
         <Profile />
 
         <div>
@@ -38,7 +38,7 @@ export default function Home() {
         <TechnologiesField id="#technologies" />
       </div>
 
-      <div id="highlight-projects" className="flex flex-col gap-10 px-4 py-20">
+      <div id="projects" className="flex flex-col gap-10 px-4 py-20">
         <div>
           <p className="text-md text-secondary font-bold opacity-80">
             {"<"}HelloWorld{"/>"}
@@ -161,7 +161,7 @@ export default function Home() {
         </div>
       </div>
       <ScrollButton pageElement="header">
-        <ArrowUp/>
+        <ArrowUp />
       </ScrollButton>
     </div>
   );
