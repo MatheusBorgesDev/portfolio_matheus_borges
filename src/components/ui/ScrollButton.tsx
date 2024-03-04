@@ -17,13 +17,15 @@ const ScrollButton = ({ pageElement, children }: ScrollButtonProps) => {
   };
 
   return (
-    <Button
-      id="scrollButton"
-      className="flex w-full text-foreground gap-4 items-center justify-start"
-      onClick={scrollToElement}
-    >
-      {children}
-    </Button>
+    <div className="flex w-full items-center justify-end p-4">
+      <Button
+        id="scrollButton"
+        className="flex text-foreground"
+        onClick={scrollToElement}
+      >
+        {children}
+      </Button>
+    </div>
   );
 };
 
