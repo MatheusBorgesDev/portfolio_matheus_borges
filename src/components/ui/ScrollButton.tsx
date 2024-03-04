@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "./button";
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 
 interface ScrollButtonProps {
   pageElement: string;
@@ -9,32 +9,21 @@ interface ScrollButtonProps {
 }
 
 const ScrollButton = ({ pageElement, children }: ScrollButtonProps) => {
-  useEffect(() => {
-    const scrollToElement = () => {
-      const targetElement = document.getElementById(pageElement);
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "smooth" });
-      }
-    };
-
-    const button = document.getElementById("scrollUpButton");
-    if (button) {
-      button.addEventListener("click", scrollToElement);
+  const scrollToElement = () => {
+    const targetElement = document.getElementById(pageElement);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
     }
-
-    return () => {
-      if (button) {
-        button.removeEventListener("click", scrollToElement);
-      }
-    };
-  }, [pageElement]);
+  };
 
   return (
-    <div className="flex w-full bg-transparent pr-4 pb-10 text-foreground object-fit justify-end">
-      <Button id="scrollUpButton" className="flex text-foreground object-fit">
-        {children}
-      </Button>
-    </div>
+    <Button
+      id="scrollButton"
+      className="flex w-full text-foreground gap-4 items-center justify-start"
+      onClick={scrollToElement}
+    >
+      {children}
+    </Button>
   );
 };
 
