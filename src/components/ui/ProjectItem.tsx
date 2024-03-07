@@ -8,14 +8,20 @@ import {
   GithubIcon,
   GlobeIcon,
 } from "lucide-react";
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from "./sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetFooter,
+  SheetTrigger,
+} from "./sheet";
 
 interface ProjectItemProps {
   project: {
     id: string;
     name: string;
     intro: string;
-    description: string;
+    description?: string;
     images: string[];
     techs: string[];
     demoLink: string;
@@ -63,7 +69,6 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
               <p className="text-secondary font-light w-full text-sm truncate">
                 {project.intro}
               </p>
-              {project.description}
             </div>
           </div>
         </Card>
@@ -75,6 +80,8 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
             <ArrowLeft />
           </Button>
         </SheetClose>
+
+        <div className="flex flex-col justify-between">
         <div className="text-3xl text-primary leading-[3rem] font-bold pt-4">
           <div className="flex w-full justify-between items-center">
             {project?.name}
@@ -108,34 +115,38 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
             </div>
           </div>
 
-          <div className="flex rounded-xl bg-transparent border-primary backdrop-blur-sm gap-4 flex-wrap p-5 justify-between shadow-brutal">
+          <div className="flex rounded-xl bg-transparent border-primary backdrop-blur-sm gap-4 flex-wrap p-5 justify-between shadow-brutal flex-1">
             <div className="flex flex-col gap-4">
               <h2 className="font-bold text-lg">{project.intro}</h2>
 
-              <p className="text-sm opacity-80">{project.description}</p>
+              <p className="text-sm opacity-80 overflow-y-auto">{project.description}</p>
             </div>
           </div>
-          <div className="flex flex-col justify-between items-center gap-4 w-full">
-            <Button variant="secondary" className="w-full h-12">
-              <Link
-                href={`${project?.demoLink}`}
-                className="flex justify-between w-full items-center"
-                target="_blank"
-              >
-                <GlobeIcon /> Demo <ArrowUpRightIcon />{" "}
-              </Link>
-            </Button>
+        </div>
 
-            <Button variant="secondary" className="w-full h-12">
-              <Link
-                href={`${project.gitLink}`}
-                className="flex justify-between w-full items-center"
-                target="_blank"
-              >
-                <GithubIcon /> Código <ArrowUpRightIcon />{" "}
-              </Link>
-            </Button>
-          </div>
+          <SheetFooter>
+            <div className="flex flex-col justify-between items-center gap-4 w-full">
+              <Button variant="secondary" className="w-full h-12">
+                <Link
+                  href={`${project?.demoLink}`}
+                  className="flex justify-between w-full items-center"
+                  target="_blank"
+                >
+                  <GlobeIcon /> Demo <ArrowUpRightIcon />{" "}
+                </Link>
+              </Button>
+
+              <Button variant="secondary" className="w-full h-12">
+                <Link
+                  href={`${project.gitLink}`}
+                  className="flex justify-between w-full items-center"
+                  target="_blank"
+                >
+                  <GithubIcon /> Código <ArrowUpRightIcon />{" "}
+                </Link>
+              </Button>
+            </div>
+          </SheetFooter>
         </div>
       </SheetContent>
     </Sheet>

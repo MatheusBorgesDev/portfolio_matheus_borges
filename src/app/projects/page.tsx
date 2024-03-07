@@ -1,6 +1,7 @@
 import ProjectItem from "@/components/ui/ProjectItem";
 import ScrollButton from "@/components/ui/ScrollButton";
 import projectsData from "@/utils/projectsData";
+import { ArrowUp } from "lucide-react";
 
 const Projects = () => {
   return (
@@ -23,6 +24,7 @@ const Projects = () => {
                 id: project.id,
                 name: project.name,
                 intro: project.intro,
+                description: project.description,
                 images: [project.images[0]],
                 techs: project.techs,
                 demoLink: project.demoLink,
@@ -32,7 +34,9 @@ const Projects = () => {
           ))}
         </div>
       </div>
-      <ScrollButton />
+      <ScrollButton pageElement="header">
+        <ArrowUp />
+      </ScrollButton>
     </div>
   );
 };

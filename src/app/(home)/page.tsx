@@ -58,6 +58,7 @@ export default function Home() {
                       id: project.id,
                       name: project.name,
                       intro: project.intro,
+                      description: project.description,
                       images: [project.images[0]],
                       techs: project.techs,
                       demoLink: project.demoLink,
