@@ -81,28 +81,27 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
           </Button>
         </SheetClose>
 
-        <div className="flex flex-col justify-between">
-        <div className="text-3xl text-primary leading-[3rem] font-bold pt-4">
-          <div className="flex w-full justify-between items-center">
-            {project?.name}
-            <div className="flex">
-              {project?.techs.map((tech) => (
-                <Image
-                  key={tech}
-                  src={`/${tech}.png`}
-                  width={0}
-                  height={0}
-                  className="h-auto w-[2rem] rounded-xl"
-                  sizes="100vw"
-                  alt="Ícone de tecnologia"
-                />
-              ))}
+        <div className="flex flex-col gap-4 justify-between">
+          <div className="text-3xl text-primary leading-[3rem] font-bold pt-4">
+            <div className="flex w-full justify-between items-center">
+              {project?.name}
+              <div className="flex">
+                {project?.techs.map((tech) => (
+                  <Image
+                    key={tech}
+                    src={`/${tech}.png`}
+                    width={0}
+                    height={0}
+                    className="h-auto w-[2rem] rounded-xl"
+                    sizes="100vw"
+                    alt="Ícone de tecnologia"
+                  />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="flex flex-col gap-4 text-secondary py-1">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 text-secondary">
             <div>
               <Image
                 src={`/projects-images/${project?.images[0]}`}
@@ -113,16 +112,17 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
                 alt="Foto fo projeto"
               />
             </div>
-          </div>
 
-          <div className="flex rounded-xl bg-transparent border-primary backdrop-blur-sm gap-4 flex-wrap p-5 justify-between shadow-brutal flex-1">
-            <div className="flex flex-col gap-4">
-              <h2 className="font-bold text-lg">{project.intro}</h2>
+            <div className="flex rounded-xl bg-transparent border-primary gap-4 p-5 shadow-brutal">
+              <div className="flex flex-col gap-4 h-[20rem]">
+                <h2 className="font-bold text-lg">{project.intro}</h2>
 
-              <p className="text-sm opacity-80 overflow-y-auto">{project.description}</p>
+                <p className="text-sm opacity-80 overflow-y-auto ">
+                  {project.description}
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
           <SheetFooter>
             <div className="flex flex-col justify-between items-center gap-4 w-full">
