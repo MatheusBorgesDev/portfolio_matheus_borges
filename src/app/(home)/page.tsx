@@ -19,10 +19,12 @@ import Image from "next/image";
 import Link from "next/link";
 import projectsData from "@/utils/projectsData";
 import Contacts from "@/components/ui/Contacts";
+import Header from "@/components/ui/Header";
 
 export default function Home() {
   return (
     <div id="header" className="flex flex-col pt-20 bg-bgLight bg-contain">
+      <Header isHomePage={true} />
       <div id="profile" className="flex flex-col gap-10 px-4 pb-20">
         <Profile />
 

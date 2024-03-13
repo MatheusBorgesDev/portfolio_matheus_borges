@@ -1,3 +1,4 @@
+import Header from "@/components/ui/Header";
 import ProjectItem from "@/components/ui/ProjectItem";
 import ScrollButton from "@/components/ui/ScrollButton";
 import projectsData from "@/utils/projectsData";
@@ -6,6 +7,8 @@ import { ArrowUp } from "lucide-react";
 const Projects = () => {
   return (
     <div id="header" className="flex flex-col pt-20 bg-bgLight bg-contain">
+      <Header isHomePage={false} />
+      
       <div className="flex flex-col gap-10 px-4 pb-10">
         <div>
           <p className="text-md text-secondary font-bold opacity-80">
