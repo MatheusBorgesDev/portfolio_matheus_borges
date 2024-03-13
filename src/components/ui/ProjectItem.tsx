@@ -9,12 +9,15 @@ import {
   GlobeIcon,
 } from "lucide-react";
 import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetFooter,
-  SheetTrigger,
-} from "./sheet";
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTrigger,
+  DialogDescription,
+  DialogTitle,
+  DialogClose,
+} from "./dialog";
 
 interface ProjectItemProps {
   project: {
@@ -31,8 +34,8 @@ interface ProjectItemProps {
 
 const ProjectItem = ({ project }: ProjectItemProps) => {
   return (
-    <Sheet>
-      <SheetTrigger>
+    <Dialog>
+      <DialogTrigger>
         <Card className="flex flex-col border-2 border-gray-500 p-1 my-3 min-h-[24rem] w-[20rem] bg-gradient-to-b from-background to-foreground rounded-lg backdrop-blur-md">
           <Image
             src={`/projects-images/${project.images[0]}`}
@@ -72,84 +75,74 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
             </div>
           </div>
         </Card>
-      </SheetTrigger>
+      </DialogTrigger>
 
-      <SheetContent className="bg-foreground">
-        <SheetClose asChild>
-          <Button type="submit">
+      <DialogContent className="bg-foreground w-[450px] rounded-lg flex flex-col gap-4 max-h-[90%] p-6">
+        <DialogClose className="flex items-start">
+          <Button type="button">
             <ArrowLeft />
           </Button>
-        </SheetClose>
+        </DialogClose>
 
-        <div className="flex flex-col gap-4 justify-between">
-          <div className="text-3xl text-primary leading-[3rem] font-bold pt-4">
-            <div className="flex w-full justify-between items-center">
-              {project?.name}
-              <div className="flex">
-                {project?.techs.map((tech) => (
-                  <Image
-                    key={tech}
-                    src={`/${tech}.png`}
-                    width={0}
-                    height={0}
-                    className="h-auto w-[2rem] rounded-xl"
-                    sizes="100vw"
-                    alt="Ícone de tecnologia"
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-4 text-secondary">
-            <div>
+        <div className="flex w-full justify-between items-center text-3xl text-primary font-bold">
+          {project?.name}
+          <div className="flex">
+            {project?.techs.map((tech) => (
               <Image
-                src={`/projects-images/${project?.images[0]}`}
+                key={tech}
+                src={`/${tech}.png`}
                 width={0}
                 height={0}
-                className="h-[15rem] w-full object-cover rounded-lg"
-                sizes="100%"
-                alt="Foto fo projeto"
+                className="h-auto w-[2rem] rounded-xl"
+                sizes="100vw"
+                alt="Ícone de tecnologia"
               />
-            </div>
+            ))}
+          </div>
+        </div>
 
-            <div className="flex rounded-xl bg-transparent border-primary gap-4 p-5 shadow-brutal">
-              <div className="flex flex-col gap-4 h-[20rem]">
-                <h2 className="font-bold text-lg">{project.intro}</h2>
+        <div className="flex flex-col gap-4 min-h-full">
+          <Image
+            src={`/projects-images/${project?.images[0]}`}
+            width={0}
+            height={0}
+            className="h-[15rem] w-full object-cover rounded-lg"
+            sizes="100%"
+            alt="Foto do projeto"
+          />
 
-                <p className="text-sm opacity-80 overflow-y-auto ">
-                  {project.description}
-                </p>
-              </div>
-            </div>
+          <h2 className="font-bold text-lg text-secondary">{project.intro}</h2>
+
+          <div className="flex flex-col rounded-lg gap-4 p-4 shadow-brutal text-secondary overflow-y-auto">
+            <p className="text-sm opacity-80">
+              {project.description}
+            </p>
           </div>
 
-          <SheetFooter>
-            <div className="flex flex-col justify-between items-center gap-4 w-full">
-              <Button variant="secondary" className="w-full h-12">
-                <Link
-                  href={`${project?.demoLink}`}
-                  className="flex justify-between w-full items-center"
-                  target="_blank"
-                >
-                  <GlobeIcon /> Demo <ArrowUpRightIcon />{" "}
-                </Link>
-              </Button>
+          <div className="flex flex-col justify-between items-center w-full gap-4">
+            <Button variant="secondary" className="w-full">
+              <Link
+                href={`${project?.demoLink}`}
+                className="flex justify-between w-full items-center"
+                target="_blank"
+              >
+                <GlobeIcon /> Demo <ArrowUpRightIcon />{" "}
+              </Link>
+            </Button>
 
-              <Button variant="secondary" className="w-full h-12">
-                <Link
-                  href={`${project.gitLink}`}
-                  className="flex justify-between w-full items-center"
-                  target="_blank"
-                >
-                  <GithubIcon /> Código <ArrowUpRightIcon />{" "}
-                </Link>
-              </Button>
-            </div>
-          </SheetFooter>
+            <Button variant="secondary" className="w-full">
+              <Link
+                href={`${project.gitLink}`}
+                className="flex justify-between w-full items-center"
+                target="_blank"
+              >
+                <GithubIcon /> Código <ArrowUpRightIcon />{" "}
+              </Link>
+            </Button>
+          </div>
         </div>
-      </SheetContent>
-    </Sheet>
+      </DialogContent>
+    </Dialog>
   );
 };
 
