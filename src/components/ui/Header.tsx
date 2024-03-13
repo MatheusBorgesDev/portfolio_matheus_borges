@@ -38,9 +38,7 @@ const Header = ({ isHomePage = true }: HeaderProps) => {
           </button>
         ) : (
           <Link href="/">
-            
-              <HomeIcon />
-            
+            <HomeIcon />
           </Link>
         )}
 
