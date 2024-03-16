@@ -73,7 +73,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
         </Card>
       </DialogTrigger>
 
-      <DialogContent className="bg-foreground w-[450px] rounded-lg flex flex-col gap-4 max-h-[90%] p-6">
+      <DialogContent className="bg-foreground max-w-full w-[400px] md:w-[500px] rounded-lg flex flex-col gap-4 max-h-[90%] p-6">
         <DialogClose className="flex items-start">
           <Button type="button">
             <ArrowLeft />

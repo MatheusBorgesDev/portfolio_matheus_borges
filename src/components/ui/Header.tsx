@@ -16,8 +16,6 @@ import Link from "next/link";
 import React, { useState } from "react";
 import ScrollLink from "./ScrollLink";
 import { Separator } from "./separator";
-import { Button } from "./button";
-import Image from "next/image";
 
 interface HeaderProps {
   isHomePage: boolean;
@@ -26,8 +24,19 @@ interface HeaderProps {
 const Header = ({ isHomePage = true }: HeaderProps) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
+  const [isEnglish, setIsEnglish] = useState(true);
+  const [isdarkMode, setIsDarkMode] = useState(false);
+
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
+  };
+
+  const toggleLanguage = () => {
+    setIsEnglish((prevState) => !prevState);
+  };
+
+  const toggleDarkMode = () => {
+    setIsDarkMode((prevState) => !prevState);
   };
 
   return (
@@ -84,11 +93,15 @@ const Header = ({ isHomePage = true }: HeaderProps) => {
           </div>
 
           <div className="flex items-center gap-4">
-            <p className="cursor-pointer">En</p>
+            <button onClick={toggleLanguage} className="w-6 text-lg">
+              {isEnglish ? "En" : "Br"}
+            </button>
 
             <span>|</span>
 
-            <SunIcon className="cursor-pointer" />
+            <button onClick={toggleDarkMode}>
+              {isdarkMode ? <SunIcon /> : <MoonIcon />}
+            </button>
           </div>
         </div>
       </div>
