@@ -18,7 +18,7 @@ const ScrollLink = ({ pageElement, children }: ScrollLinkProps) => {
     <Button
       id="scrollButton"
       variant="link"
-      className="flex w-full text-lg gap-4 items-center justify-start my-2"
+      className="flex w-full text-lg gap-4 items-center justify-start"
       onClick={scrollToElement}
     >
       {children}
