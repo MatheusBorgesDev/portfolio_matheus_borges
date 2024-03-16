@@ -6,7 +6,7 @@ import { ArrowUp } from "lucide-react";
 
 const Projects = () => {
   return (
-    <div id="header" className="flex flex-col pt-20 bg-bgLight bg-contain">
+    <div id="header" className="flex flex-col pt-20 lg:max-w-[70rem]">
       <Header isHomePage={false} />
       
       <div className="flex flex-col gap-10 px-4 pb-10">

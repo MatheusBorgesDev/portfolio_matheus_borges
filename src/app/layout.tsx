@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={robotoSlab.className}>
-        <div className="flex h-full flex-col overflow-x-clip pt-16 bg-bgImg bg-cover">
+        <div className="flex h-full flex-col overflow-x-clip bg-bgLight bg-cover pt-16 lg:items-center">
           <div className="flex-1">{children}</div>
           <Footer />
         </div>

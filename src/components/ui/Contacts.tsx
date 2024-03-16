@@ -26,8 +26,9 @@ const Contacts = () => {
         <Image
           src="/gmail.svg"
           alt="Ícone do WhatsApp"
-          width={20}
-          height={20}
+          width={0}
+          height={0}
+          className="h-[1.5rem] w-full"
         ></Image>
       </ContactItem>
 
@@ -35,8 +36,9 @@ const Contacts = () => {
         <Image
           src="/whatsapp.svg"
           alt="Ícone do WhatsApp"
-          width={20}
-          height={20}
+          width={0}
+          height={0}
+          className="h-[1.5rem] w-full"
         ></Image>
       </ContactItem>
 
@@ -44,8 +46,9 @@ const Contacts = () => {
         <Image
           src="/linkedin.svg"
           alt="Ícone do WhatsApp"
-          width={20}
-          height={20}
+          width={0}
+          height={0}
+          className="h-[1.5rem] w-full"
         ></Image>
       </ContactItem>
 
@@ -53,8 +56,9 @@ const Contacts = () => {
         <Image
           src="/github.svg"
           alt="Ícone do WhatsApp"
-          width={20}
-          height={20}
+          width={0}
+          height={0}
+          className="h-[1.5rem] w-full"
         ></Image>
       </ContactItem>
     </div>

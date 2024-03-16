@@ -5,7 +5,7 @@ const Profile = () => {
   return (
     <div className="flex flex-col justify-center items-center relative mb-12">
       <div>
-        <div className="w-[15rem]">
+        <div className="w-[15rem] md:w-[19rem] lg:w-[24rem]">
           <Image
             src="/profile_image.jpg"
             width={0}

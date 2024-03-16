@@ -23,29 +23,35 @@ import Header from "@/components/ui/Header";
 
 export default function Home() {
   return (
-    <div id="header" className="flex flex-col pt-20 bg-bgLight bg-contain">
+    <main
+      id="header"
+      className="flex flex-col pt-20 md:px-[5%] lg:max-w-[70rem]"
+    >
       <Header isHomePage={true} />
-      <div id="profile" className="flex flex-col gap-10 px-4 pb-20">
+
+      <div id="profile" className="flex flex-col gap-10 px-4 pb-20 justify-center md:flex-row-reverse md:justify-between">
         <Profile />
 
-        <div>
-          <h1 className="text-md text-secondary font-bold opacity-80">
+        <div className="flex flex-col gap-4 lg:justify-center">
+          <h1 className="text-lg text-secondary font-bold opacity-80">
             Olá, Matheus Borges aqui! &#128075;
           </h1>
-          <h2 className="text-[3.5rem] text-primary leading-[3rem] font-bold">
+          <h2 className="text-[3rem] lg:text-[3.5rem] text-primary leading-[3rem] font-bold pb-4 w-full">
             Desenvolvedor <br />
             front-end.
           </h2>
+          <div className="flex justify-center">
+            <TechnologiesField id="#technologies" />
+          </div>
         </div>
-        <TechnologiesField id="#technologies" />
       </div>
 
       <div id="projects" className="flex flex-col gap-10 px-4 py-20">
         <div>
-          <p className="text-md text-secondary font-bold opacity-80">
+          <p className="text-lg text-secondary font-bold opacity-80">
             {"<"}HelloWorld{"/>"}
           </p>
-          <h2 className="text-[3.5rem] text-primary leading-[3rem] font-bold">
+          <h2 className="text-[3rem] lg:text-[3.5rem] text-primary leading-[3rem] font-bold">
             Projetos em destaque.
           </h2>
         </div>
@@ -90,16 +96,16 @@ export default function Home() {
 
       <div id="about-me" className="flex flex-col gap-10 px-4 py-20">
         <div>
-          <p className="text-md text-secondary font-bold opacity-80">
+          <p className="text-lg text-secondary font-bold opacity-80">
             Matheus Borges
           </p>
-          <h2 className="text-[3.5rem] text-primary leading-[3rem] font-bold">
+          <h2 className="text-[3rem] lg:text-[3.5rem] text-primary leading-[3rem] font-bold">
             Sobre mim.
           </h2>
         </div>
 
         <div className="flex gap-2">
-          <div className="min-w-[10rem] h-[22rem]">
+          <div className="min-w-[10rem] min-h-full max-h-full lg:min-h-[20rem]">
             <Image
               src="https://github.com/MatheusBorgesDev.png"
               width={0}
@@ -110,7 +116,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex min-h-full rounded-xl bg-transparent text-justify backdrop-blur-lg gap-4 flex-wrap p-5 justify-between shadow-brutal items-center">
+          <div className="flex min-h-full max-h-full rounded-xl bg-transparent text-justify backdrop-blur-lg gap-4 flex-wrap p-5 justify-between shadow-brutal items-center">
             <p className="text-secondary">
               &quot;Há mais ou menos um ano e meio, comecei a dar os primeiros
               passos no mundo da programação, e desde as primeiras linhas de
@@ -124,13 +130,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="contact" className=" flex flex-col gap-8 px-4 pt-20 pb-10">
+      <div id="contact" className=" flex flex-col gap-8 px-4 py-20">
         <div className="flex flex-col gap-4">
           <div>
-            <p className="text-md text-secondary font-bold opacity-80">
+            <p className="text-lg text-secondary font-bold opacity-80">
               Vamos trabalhar juntos?
             </p>
-            <h2 className="text-[3.5rem] text-primary leading-[3rem] font-bold">
+            <h2 className="text-[3rem] lg:text-[3.5rem] text-primary leading-[3rem] font-bold">
               Contato.
             </h2>
           </div>
@@ -166,6 +172,6 @@ export default function Home() {
       <ScrollButton pageElement="header">
         <ArrowUp />
       </ScrollButton>
-    </div>
+    </main>
   );
 }

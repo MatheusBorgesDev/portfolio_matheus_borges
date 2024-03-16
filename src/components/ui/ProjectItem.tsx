@@ -11,11 +11,7 @@ import {
 import {
   Dialog,
   DialogContent,
-  DialogFooter,
-  DialogHeader,
   DialogTrigger,
-  DialogDescription,
-  DialogTitle,
   DialogClose,
 } from "./dialog";
 

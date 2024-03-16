@@ -17,7 +17,7 @@ const ScrollButton = ({ pageElement, children }: ScrollButtonProps) => {
   };
 
   return (
-    <div className="flex w-full items-center justify-end p-4">
+    <div className="flex w-full items-center justify-end p-4 lg:hidden">
       <Button
         id="scrollButton"
         className="flex text-foreground"
