@@ -8,12 +8,7 @@ import {
   GithubIcon,
   GlobeIcon,
 } from "lucide-react";
-import {
-  Dialog,
-  DialogContent,
-  DialogTrigger,
-  DialogClose,
-} from "./dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogClose } from "./dialog";
 
 interface ProjectItemProps {
   project: {
@@ -32,7 +27,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
   return (
     <Dialog>
       <DialogTrigger>
-        <Card className="flex flex-col border-2 border-gray-500 p-1 my-3 min-h-[24rem] w-[20rem] bg-gradient-to-b from-background to-foreground rounded-lg backdrop-blur-md">
+        <Card className="flex flex-col border-2 border-card-foreground p-1 my-3 min-h-[24rem] w-[20rem] bg-gradient-to-b from-background to-foreground rounded-lg backdrop-blur-md">
           <Image
             src={`/projects-images/${project.images[0]}`}
             width={0}
@@ -65,7 +60,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
                   </div>
                 )}
               </div>
-              <p className="text-secondary font-light w-full text-sm truncate">
+              <p className="text-secondary text-left font-light w-full text-sm truncate">
                 {project.intro}
               </p>
             </div>
@@ -110,9 +105,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
           <h2 className="font-bold text-lg text-secondary">{project.intro}</h2>
 
           <div className="flex flex-col rounded-lg gap-4 p-4 shadow-brutal text-secondary overflow-y-auto">
-            <p className="text-sm opacity-80">
-              {project.description}
-            </p>
+            <p className="text-sm opacity-80">{project.description}</p>
           </div>
 
           <div className="flex flex-col justify-between items-center w-full gap-4">

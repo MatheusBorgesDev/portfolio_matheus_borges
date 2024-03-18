@@ -1,11 +1,11 @@
-import { CopyrightIcon } from "lucide-react";
-
 const Footer = () => {
-  return ( 
-    <div className="flex w-full gap-1 min-h-12 items-center justify-center bg-secondary text-background">
-      <p className="text-sm">© 2024 | Matheus Borges - Todos os direitos reservados</p>
+  return (
+    <div className="flex w-full gap-1 min-h-12 items-center justify-center">
+      <p className="text-sm text-secondary">
+        © 2024 | Matheus Borges - Todos os direitos reservados
+      </p>
     </div>
-   );
-}
- 
+  );
+};
+
 export default Footer;

@@ -10,8 +10,8 @@ interface TechnologiesFieldProps {
 const TechnologiesField = ({ id }: TechnologiesFieldProps) => {
   return (
     <>
-      <div id={id} className="bg-bgImg bg-contain">
-        <div className="flex rounded-xl border-primary backdrop-blur-md p-2 flex-wrap gap-4 shadow-brutal max-w-[25rem]">
+      <div id={id}>
+        <div className="flex rounded-xl bg-card backdrop-blur-md px-2 py-4 flex-wrap gap-4 shadow-brutal max-w-[25rem]">
           <div className="flex w-full justify-between">
             <TechnologyItem
               imgUrl="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"

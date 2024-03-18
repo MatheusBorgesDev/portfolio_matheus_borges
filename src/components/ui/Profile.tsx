@@ -17,7 +17,7 @@ const Profile = () => {
         </div>
       </div>
 
-      <div className="backdrop-blur-sm bg-transparent rounded-xl absolute bottom-[-2.5rem] shadow-brutal p-2">
+      <div className="backdrop-blur-sm bg-card rounded-xl absolute bottom-[-2.5rem] shadow-brutal p-2">
         <Contacts/>
       </div>
     </div>

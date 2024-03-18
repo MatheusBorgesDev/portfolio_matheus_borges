@@ -12,7 +12,7 @@ const Contacts = () => {
   const ContactItem = ({ children, contactLink }: ContactItemProps) => {
     return (
       <Link href={`${contactLink}`} target="_blank">
-        <Button variant="secondary" className="h-auto w-auto p-2 rounded-full">
+        <Button variant="secondary" className="h-auto w-auto p-2 rounded-full bg-card-foreground hover:bg-black ">
           {children}
         </Button>
         ;
@@ -21,14 +21,14 @@ const Contacts = () => {
   };
 
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-4 text-transparent bg-transparent">
       <ContactItem contactLink="mailto:matheusborges.dev@gmail.com">
         <Image
           src="/gmail.svg"
           alt="Ícone do WhatsApp"
           width={0}
           height={0}
-          className="h-[1.5rem] w-full"
+          className={`h-[1.5rem] w-full`}
         ></Image>
       </ContactItem>
 
