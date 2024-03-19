@@ -13,19 +13,19 @@ import {
 import { Card } from "./card";
 import Logo from "./Logo";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, MouseEventHandler } from "react";
 import ScrollLink from "./ScrollLink";
 import { Separator } from "./separator";
 
 interface HeaderProps {
   isHomePage: boolean;
+  toggleDarkMode: MouseEventHandler<HTMLButtonElement>;
+  darkMode: boolean;
 }
 
-const Header = ({ isHomePage = true }: HeaderProps) => {
+const Header = ({ isHomePage = true, toggleDarkMode, darkMode }: HeaderProps) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
-
   const [isEnglish, setIsEnglish] = useState(true);
-  const [isdarkMode, setIsDarkMode] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -35,12 +35,9 @@ const Header = ({ isHomePage = true }: HeaderProps) => {
     setIsEnglish((prevState) => !prevState);
   };
 
-  const toggleDarkMode = () => {
-    setIsDarkMode((prevState) => !prevState);
-  };
 
   return (
-    <Card className="fixed top-0 left-0 z-20 py-2 px-3 bg-background border-[.1rem] border-background-foreground rounded-t-none w-full lg:px-10">
+    <Card className="fixed top-0 left-0 z-20 py-2 px-3 bg-foreground border-[.1rem] border-background-foreground rounded-none w-full lg:px-10">
       <div className="flex items-center justify-between">
         <div className="lg:hidden w-[24px] h-[24px]">
           {isHomePage ? (
@@ -92,7 +89,7 @@ const Header = ({ isHomePage = true }: HeaderProps) => {
             <ScrollLink pageElement={"contact"}>Contato</ScrollLink>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 text-secondary">
             <button onClick={toggleLanguage} className="w-6 text-lg">
               {isEnglish ? "En" : "Br"}
             </button>
@@ -100,7 +97,7 @@ const Header = ({ isHomePage = true }: HeaderProps) => {
             <span>|</span>
 
             <button onClick={toggleDarkMode}>
-              {isdarkMode ? <SunIcon /> : <MoonIcon />}
+              {!darkMode ? <SunIcon /> : <MoonIcon />}
             </button>
           </div>
         </div>

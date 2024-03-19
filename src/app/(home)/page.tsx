@@ -20,9 +20,14 @@ import Link from "next/link";
 import projectsData from "@/utils/projectsData";
 import Contacts from "@/components/ui/Contacts";
 import Header from "@/components/ui/Header";
+import { useState } from "react";
 
 export default function Home() {
-  const darkMode = true;
+  const [darkMode, setDarkMode] = useState(true);
+
+  const toggleDarkMode = () => {
+    setDarkMode((prevState) => !prevState)
+  }
 
   return (
     <div
@@ -38,7 +43,7 @@ export default function Home() {
           id="profile"
           className="flex flex-col gap-10 px-4 pb-20 justify-center md:flex-row-reverse md:justify-between"
         >
-          <Header isHomePage={true} />
+          <Header isHomePage={true} toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
 
           <Profile />
 
