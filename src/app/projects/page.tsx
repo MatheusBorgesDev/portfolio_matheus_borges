@@ -7,24 +7,8 @@ import { ArrowUp } from "lucide-react";
 import { MouseEvent, useState } from "react";
 
 const Projects = () => {
-  const [darkMode, setDarkMode] = useState(true);
-
-  const toggleDarkMode = () => {
-    setDarkMode((prevState) => !prevState);
-  };
   return (
-    <div
-      className={`flex w-screen justify-center bg-background ${
-        darkMode ? "dark" : ""
-      }`}
-    >
       <div id="header" className="flex flex-col pt-20 lg:max-w-[70rem]">
-        <Header
-          isHomePage={false}
-          toggleDarkMode={toggleDarkMode}
-          darkMode={darkMode}
-        />
-
         <div className="flex flex-col gap-10 px-4 pb-10">
           <div>
             <p className="text-md text-secondary font-bold opacity-80">
@@ -57,7 +41,6 @@ const Projects = () => {
           <ArrowUp />
         </ScrollButton>
       </div>
-    </div>
   );
 };
 

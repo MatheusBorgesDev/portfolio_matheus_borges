@@ -20,174 +20,159 @@ import Link from "next/link";
 import projectsData from "@/utils/projectsData";
 import Contacts from "@/components/ui/Contacts";
 import Header from "@/components/ui/Header";
-import { useState } from "react";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true);
-
-  const toggleDarkMode = () => {
-    setDarkMode((prevState) => !prevState)
-  }
-
   return (
-    <div
-      className={`flex w-screen justify-center bg-background ${
-        darkMode ? "dark" : ""
-      }`}
+    <main
+      id="header"
+      className="flex flex-col pt-20 md:px-[5%] lg:max-w-[70rem]"
     >
-      <main
-        id="header"
-        className="flex flex-col pt-20 md:px-[5%] lg:max-w-[70rem]"
+      <div
+        id="profile"
+        className="flex flex-col gap-10 px-4 pb-20 justify-center md:flex-row-reverse md:justify-between"
       >
-        <div
-          id="profile"
-          className="flex flex-col gap-10 px-4 pb-20 justify-center md:flex-row-reverse md:justify-between"
-        >
-          <Header isHomePage={true} toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
+        <Profile />
 
-          <Profile />
-
-          <div className="flex flex-col gap-4 lg:justify-center">
-            <h1 className="text-lg text-secondary font-bold opacity-90 ">
-              Olá, Matheus Borges aqui! &#128075;
-            </h1>
-            <h2 className="text-[3rem] lg:text-[3.5rem] text-primary leading-[3rem] font-bold pb-4 w-full">
-              Desenvolvedor <br />
-              front-end.
-            </h2>
-            <div className="flex justify-center">
-              <TechnologiesField id="#technologies" />
-            </div>
+        <div className="flex flex-col gap-4 lg:justify-center">
+          <h1 className="text-lg text-secondary font-bold opacity-90 ">
+            Olá, Matheus Borges aqui! &#128075;
+          </h1>
+          <h2 className="text-[3rem] lg:text-[3.5rem] text-primary leading-[3rem] font-bold pb-4 w-full">
+            Desenvolvedor <br />
+            front-end.
+          </h2>
+          <div className="flex justify-center">
+            <TechnologiesField id="#technologies" />
           </div>
         </div>
+      </div>
 
-        <div id="projects" className="flex flex-col gap-10 px-4 py-20">
+      <div id="projects" className="flex flex-col gap-10 px-4 py-20">
+        <div>
+          <p className="text-lg text-secondary font-bold opacity-90">
+            {"<"}HelloWorld{"/>"}
+          </p>
+          <h2 className="text-[3rem] lg:text-[3.5rem] text-primary leading-[3rem] font-bold">
+            Projetos em destaque.
+          </h2>
+        </div>
+
+        <div className="flex flex-col gap-8 relative">
+          <Carousel className="rounded-lg bg-card">
+            <CarouselContent className="ml-4 cursor-grab active:cursor-grabbing">
+              {projectsData.map((project) => (
+                <CarouselItem key={project.id} className="basis-3/3 px-5">
+                  <ProjectItem
+                    project={{
+                      id: project.id,
+                      name: project.name,
+                      intro: project.intro,
+                      description: project.description,
+                      images: [project.images[0]],
+                      techs: project.techs,
+                      demoLink: project.demoLink,
+                      gitLink: project.gitLink,
+                    }}
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+
+          <div className="flex justify-center">
+            <Link href="/projects">
+              <Button
+                variant="secondary"
+                className="flex gap-2 text-foreground object-fit"
+              >
+                <p>Acesse todos os projetos</p>
+                <ArrowRight />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <div id="about-me" className="flex flex-col gap-10 px-4 py-20">
+        <div>
+          <p className="text-lg text-secondary font-bold opacity-90">
+            Matheus Borges
+          </p>
+          <h2 className="text-[3rem] lg:text-[3.5rem] text-primary leading-[3rem] font-bold">
+            Sobre mim.
+          </h2>
+        </div>
+
+        <div className="flex gap-2">
+          <div className="min-w-[10rem] min-h-full max-h-full lg:min-h-[20rem] rounded-xl">
+            <Image
+              src="https://github.com/MatheusBorgesDev.png"
+              width={0}
+              height={0}
+              className="h-full w-full rounded-xl object-cover shadow-greenNeon"
+              sizes="100vw"
+              alt="Foto de Matheus Borges"
+            />
+          </div>
+
+          <div className="flex min-h-full max-h-full rounded-xl bg-foreground text-justify backdrop-blur-lg gap-4 flex-wrap p-5 justify-between shadow-greenNeon items-center">
+            <p className="text-secondary">
+              &quot;Há mais ou menos um ano e meio, comecei a dar os primeiros
+              passos no mundo da programação, e desde as primeiras linhas de
+              código, fui descobrindo a minha verdadeira vocação.
+              <br />
+              <br />
+              Hoje, sou apaixonado pela arte de programar e busco a primeira
+              oportunidade para iniciar a minha carreira.&quot;
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="contact" className=" flex flex-col gap-8 px-4 py-20">
+        <div className="flex flex-col gap-4">
           <div>
             <p className="text-lg text-secondary font-bold opacity-90">
-              {"<"}HelloWorld{"/>"}
+              Vamos trabalhar juntos?
             </p>
             <h2 className="text-[3rem] lg:text-[3.5rem] text-primary leading-[3rem] font-bold">
-              Projetos em destaque.
+              Contato.
             </h2>
-          </div>
-
-          <div className="flex flex-col gap-8 relative">
-            <Carousel className="rounded-lg bg-card">
-              <CarouselContent className="ml-4 cursor-grab active:cursor-grabbing">
-                {projectsData.map((project) => (
-                  <CarouselItem key={project.id} className="basis-3/3 px-5">
-                    <ProjectItem
-                      project={{
-                        id: project.id,
-                        name: project.name,
-                        intro: project.intro,
-                        description: project.description,
-                        images: [project.images[0]],
-                        techs: project.techs,
-                        demoLink: project.demoLink,
-                        gitLink: project.gitLink,
-                      }}
-                    />
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-
-            <div className="flex justify-center">
-              <Link href="/projects">
-                <Button
-                  variant="secondary"
-                  className="flex gap-2 text-foreground object-fit"
-                >
-                  <p>Acesse todos os projetos</p>
-                  <ArrowRight />
-                </Button>
-              </Link>
-            </div>
           </div>
         </div>
 
-        <div id="about-me" className="flex flex-col gap-10 px-4 py-20">
-          <div>
-            <p className="text-lg text-secondary font-bold opacity-90">
-              Matheus Borges
-            </p>
-            <h2 className="text-[3rem] lg:text-[3.5rem] text-primary leading-[3rem] font-bold">
-              Sobre mim.
-            </h2>
-          </div>
-
-          <div className="flex gap-2">
-            <div className="min-w-[10rem] min-h-full max-h-full lg:min-h-[20rem] rounded-xl">
-              <Image
-                src="https://github.com/MatheusBorgesDev.png"
-                width={0}
-                height={0}
-                className="h-full w-full rounded-xl object-cover shadow-greenNeon"
-                sizes="100vw"
-                alt="Foto de Matheus Borges"
-              />
-            </div>
-
-            <div className="flex min-h-full max-h-full rounded-xl bg-foreground text-justify backdrop-blur-lg gap-4 flex-wrap p-5 justify-between shadow-greenNeon items-center">
-              <p className="text-secondary">
-                &quot;Há mais ou menos um ano e meio, comecei a dar os primeiros
-                passos no mundo da programação, e desde as primeiras linhas de
-                código, fui descobrindo a minha verdadeira vocação.
-                <br />
-                <br />
-                Hoje, sou apaixonado pela arte de programar e busco a primeira
-                oportunidade para iniciar a minha carreira.&quot;
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div id="contact" className=" flex flex-col gap-8 px-4 py-20">
+        <div className="flex flex-col rounded-xl bg-foreground backdrop-blur-lg gap-4 flex-wrap my-4 p-5 shadow-greenNeon ">
           <div className="flex flex-col gap-4">
-            <div>
-              <p className="text-lg text-secondary font-bold opacity-90">
-                Vamos trabalhar juntos?
-              </p>
-              <h2 className="text-[3rem] lg:text-[3.5rem] text-primary leading-[3rem] font-bold">
-                Contato.
-              </h2>
-            </div>
+            <p className="text-secondary">
+              Envie um e-mail, mande uma mensagem pelo WhatsApp ou me chama nas
+              redes sociais!
+            </p>
+
+            <Contacts />
           </div>
 
-          <div className="flex flex-col rounded-xl bg-foreground backdrop-blur-lg gap-4 flex-wrap my-4 p-5 shadow-greenNeon ">
-            <div className="flex flex-col gap-4">
-              <p className="text-secondary">
-                Envie um e-mail, mande uma mensagem pelo WhatsApp ou me chama
-                nas redes sociais!
-              </p>
+          <form action="" className="flex flex-col gap-2 text-secondary">
+            <Input type="text" placeholder="Nome" />
+            <Input type="email" placeholder="E-mail" />
+            <Textarea placeholder="Escreva sua mensagem aqui" />
 
-              <Contacts />
+            <div className="w-full object-fit pt-2">
+              <Button
+                variant="secondary"
+                className="flex gap-2 text-foreground object-fit"
+              >
+                <p>Envie sua mensagem</p>
+                <ArrowRight />
+              </Button>
             </div>
-
-            <form action="" className="flex flex-col gap-2 text-secondary">
-              <Input type="text" placeholder="Nome" />
-              <Input type="email" placeholder="E-mail" />
-              <Textarea placeholder="Escreva sua mensagem aqui" />
-
-              <div className="w-full object-fit pt-2">
-                <Button
-                  variant="secondary"
-                  className="flex gap-2 text-foreground object-fit"
-                >
-                  <p>Envie sua mensagem</p>
-                  <ArrowRight />
-                </Button>
-              </div>
-            </form>
-          </div>
+          </form>
         </div>
-        <ScrollButton pageElement="header">
-          <ArrowUp />
-        </ScrollButton>
-      </main>
-    </div>
+      </div>
+      <ScrollButton pageElement="header">
+        <ArrowUp />
+      </ScrollButton>
+    </main>
   );
 }
