@@ -12,7 +12,10 @@ const Contacts = () => {
   const ContactItem = ({ children, contactLink }: ContactItemProps) => {
     return (
       <Link href={`${contactLink}`} target="_blank">
-        <Button variant="secondary" className="h-auto w-auto p-2 rounded-full bg-card-foreground hover:bg-black ">
+        <Button
+          variant="secondary"
+          className="h-auto w-auto p-2 rounded-full bg-card-foreground hover:bg-black "
+        >
           {children}
         </Button>
         ;
@@ -21,11 +24,11 @@ const Contacts = () => {
   };
 
   return (
-    <div className="flex items-center gap-4 text-transparent bg-transparent">
+    <div className="flex items-center gap-4 text-transparent rounded-xl">
       <ContactItem contactLink="mailto:matheusborges.dev@gmail.com">
         <Image
           src="/gmail.svg"
-          alt="Ícone do WhatsApp"
+          alt="Ícone do Gmail"
           width={0}
           height={0}
           className={`h-[1.5rem] w-full`}
@@ -45,7 +48,7 @@ const Contacts = () => {
       <ContactItem contactLink="https://www.linkedin.com/in/matheus-borges-45baa9250/">
         <Image
           src="/linkedin.svg"
-          alt="Ícone do WhatsApp"
+          alt="Ícone do LinkedIn"
           width={0}
           height={0}
           className="h-[1.5rem] w-full"
@@ -55,7 +58,7 @@ const Contacts = () => {
       <ContactItem contactLink="https://github.com/MatheusBorgesDev">
         <Image
           src="/github.svg"
-          alt="Ícone do WhatsApp"
+          alt="Ícone do Github"
           width={0}
           height={0}
           className="h-[1.5rem] w-full"

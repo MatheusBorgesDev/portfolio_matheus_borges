@@ -9,9 +9,8 @@ interface TechnologiesFieldProps {
 
 const TechnologiesField = ({ id }: TechnologiesFieldProps) => {
   return (
-    <>
-      <div id={id}>
-        <div className="flex rounded-xl bg-card backdrop-blur-md px-2 py-4 flex-wrap gap-4 shadow-brutal max-w-[25rem]">
+      <div id={id} >
+        <div className="flex rounded-xl bg-foreground backdrop-blur-sm px-2 py-4 flex-wrap gap-4 max-w-[25rem] shadow-greenNeon">
           <div className="flex w-full justify-between">
             <TechnologyItem
               imgUrl="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
@@ -43,7 +42,6 @@ const TechnologiesField = ({ id }: TechnologiesFieldProps) => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 

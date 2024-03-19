@@ -19,8 +19,9 @@ const config = {
     },
     extend: {
       boxShadow: {
-        brutal:
-          "rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset",
+        green: "hsl(153, 97%, 38%) 0px 0px 2px 2px, hsl(153, 97%, 38%) 0px 0px",
+        greenNeon:
+          "hsl(153, 97%, 38%) 0px 0px 0px 2px, hsl(153, 97%, 38%) 6px 6px , rgba(255, 255, 255, 0.08) 0px 1px 0px inset",
       },
       backgroundImage: {
         bgLight: "url('/bglight.png')",

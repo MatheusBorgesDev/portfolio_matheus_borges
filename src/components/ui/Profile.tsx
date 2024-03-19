@@ -10,15 +10,15 @@ const Profile = () => {
             src="/profile_image.jpg"
             width={0}
             height={0}
-            className="h-auto w-full rounded-full shadow-brutal"
+            className="h-auto w-full rounded-full border-2 border-primary"
             sizes="100%"
             alt="Foto de Matheus Borges"
           />
         </div>
       </div>
 
-      <div className="backdrop-blur-sm bg-card rounded-xl absolute bottom-[-2.5rem] shadow-brutal p-2">
-        <Contacts/>
+      <div className="p-2 bg-foreground shadow-greenNeon rounded-xl absolute bottom-[-2.5rem] ">
+        <Contacts />
       </div>
     </div>
   );

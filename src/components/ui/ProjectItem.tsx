@@ -27,45 +27,47 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
   return (
     <Dialog>
       <DialogTrigger>
-        <Card className="flex flex-col border-2 border-card-foreground p-1 my-3 min-h-[24rem] w-[20rem] bg-gradient-to-b from-background to-foreground rounded-lg backdrop-blur-md">
-          <Image
-            src={`/projects-images/${project.images[0]}`}
-            width={0}
-            height={0}
-            className="h-[20rem] w-auto rounded-lg"
-            sizes="100%"
-            alt={`Home page of ${project.name}`}
-          />
+        <div className="shadow-green rounded-lg">
+          <Card className="flex flex-col border-2 border-card p-1 my-3 min-h-[24rem] w-[20rem] rounded-lg backdrop-blur-md">
+            <Image
+              src={`/projects-images/${project.images[0]}`}
+              width={0}
+              height={0}
+              className="h-[20rem] w-auto rounded-lg"
+              sizes="100%"
+              alt={`Home page of ${project.name}`}
+            />
 
-          <div className="flex flex-col gap-4 w-full p-4 rounded-lg">
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center justify-between">
-                <p className="text-secondary font-bold text-xl">
-                  {project.name}
+            <div className="flex flex-col gap-4 w-full p-4 rounded-lg">
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center justify-between">
+                  <p className="text-secondary font-bold text-xl">
+                    {project.name}
+                  </p>
+
+                  {Array.isArray(project.techs) && (
+                    <div className="flex flex-wrap">
+                      {project.techs.map((tech) => (
+                        <Image
+                          key={tech}
+                          src={`/${tech}.png`}
+                          width={0}
+                          height={0}
+                          className="h-auto w-[2rem] rounded-xl"
+                          sizes="100vw"
+                          alt="Ícone de tecnologia"
+                        />
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <p className="text-secondary text-left font-light w-full text-sm truncate">
+                  {project.intro}
                 </p>
-
-                {Array.isArray(project.techs) && (
-                  <div className="flex flex-wrap">
-                    {project.techs.map((tech) => (
-                      <Image
-                        key={tech}
-                        src={`/${tech}.png`}
-                        width={0}
-                        height={0}
-                        className="h-auto w-[2rem] rounded-xl"
-                        sizes="100vw"
-                        alt="Ícone de tecnologia"
-                      />
-                    ))}
-                  </div>
-                )}
               </div>
-              <p className="text-secondary text-left font-light w-full text-sm truncate">
-                {project.intro}
-              </p>
             </div>
-          </div>
-        </Card>
+          </Card>
+        </div>
       </DialogTrigger>
 
       <DialogContent className="bg-foreground max-w-full w-[400px] md:w-[500px] rounded-lg flex flex-col gap-4 max-h-[90%] p-6">
@@ -104,7 +106,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
 
           <h2 className="font-bold text-lg text-secondary">{project.intro}</h2>
 
-          <div className="flex flex-col rounded-lg gap-4 p-4 shadow-brutal text-secondary overflow-y-auto">
+          <div className="flex flex-col rounded-lg gap-4 p-4 shadow-greenNeon text-secondary overflow-y-auto">
             <p className="text-sm opacity-80">{project.description}</p>
           </div>
 
