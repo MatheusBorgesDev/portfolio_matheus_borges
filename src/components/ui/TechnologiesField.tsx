@@ -2,12 +2,15 @@ import { ArrowRightIcon } from "lucide-react";
 import TechnologyItem from "./TechnologyItem";
 import { Button } from "./button";
 import Link from "next/link";
+import { useTranslation } from 'react-i18next';
 
 interface TechnologiesFieldProps {
   id: string;
 }
 
 const TechnologiesField = ({ id }: TechnologiesFieldProps) => {
+  const { t } = useTranslation()
+
   return (
       <div id={id} >
         <div className="flex rounded-xl bg-foreground backdrop-blur-sm px-2 py-4 flex-wrap gap-4 max-w-[25rem] shadow-greenNeon">
@@ -34,7 +37,7 @@ const TechnologiesField = ({ id }: TechnologiesFieldProps) => {
             <Button variant="secondary" className="text-foreground object-fit">
               <Link href="/projects">
                 <div className="flex gap-2 items-center">
-                  <p>Veja os projetos</p>
+                  <p>{t("seeProjects")}</p>
                   <ArrowRightIcon />
                 </div>
               </Link>

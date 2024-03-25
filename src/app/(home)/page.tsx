@@ -19,9 +19,11 @@ import Image from "next/image";
 import Link from "next/link";
 import projectsData from "@/utils/projectsData";
 import Contacts from "@/components/ui/Contacts";
-import Header from "@/components/ui/Header";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const { t } = useTranslation();
+
   return (
     <main
       id="header"
@@ -35,11 +37,10 @@ export default function Home() {
 
         <div className="flex flex-col gap-4 lg:justify-center">
           <h1 className="text-lg text-secondary font-bold opacity-90 ">
-            Olá, Matheus Borges aqui! &#128075;
+            {t("greeting")}
           </h1>
           <h2 className="text-[3rem] lg:text-[3.5rem] text-primary leading-[3rem] font-bold pb-4 w-full">
-            Desenvolvedor <br />
-            front-end.
+            {t("developer")}.
           </h2>
           <div className="flex justify-center">
             <TechnologiesField id="#technologies" />
@@ -53,7 +54,7 @@ export default function Home() {
             {"<"}HelloWorld{"/>"}
           </p>
           <h2 className="text-[3rem] lg:text-[3.5rem] text-primary leading-[3rem] font-bold">
-            Projetos em destaque.
+            {t("featuredProjects")}.
           </h2>
         </div>
 
@@ -87,7 +88,7 @@ export default function Home() {
                 variant="secondary"
                 className="flex gap-2 text-foreground object-fit"
               >
-                <p>Acesse todos os projetos</p>
+                <p>{t("seeAllProjects")}</p>
                 <ArrowRight />
               </Button>
             </Link>
@@ -101,7 +102,7 @@ export default function Home() {
             Matheus Borges
           </p>
           <h2 className="text-[3rem] lg:text-[3.5rem] text-primary leading-[3rem] font-bold">
-            Sobre mim.
+            {t("aboutMe")}.
           </h2>
         </div>
 
@@ -119,13 +120,10 @@ export default function Home() {
 
           <div className="flex min-h-full max-h-full rounded-xl bg-foreground text-justify backdrop-blur-lg gap-4 flex-wrap p-5 justify-between shadow-greenNeon items-center">
             <p className="text-secondary">
-              &quot;Há mais ou menos um ano e meio, comecei a dar os primeiros
-              passos no mundo da programação, e desde as primeiras linhas de
-              código, fui descobrindo a minha verdadeira vocação.
+              &quot;{t("aboutMeFirstDescription")}
               <br />
               <br />
-              Hoje, sou apaixonado pela arte de programar e busco a primeira
-              oportunidade para iniciar a minha carreira.&quot;
+              {t("aboutMeSecondDescription")}&quot;
             </p>
           </div>
         </div>
@@ -135,35 +133,32 @@ export default function Home() {
         <div className="flex flex-col gap-4">
           <div>
             <p className="text-lg text-secondary font-bold opacity-90">
-              Vamos trabalhar juntos?
+              {t("workTogether")}
             </p>
             <h2 className="text-[3rem] lg:text-[3.5rem] text-primary leading-[3rem] font-bold">
-              Contato.
+              {t("contact")}.
             </h2>
           </div>
         </div>
 
         <div className="flex flex-col rounded-xl bg-foreground backdrop-blur-lg gap-4 flex-wrap my-4 p-5 shadow-greenNeon ">
           <div className="flex flex-col gap-4">
-            <p className="text-secondary">
-              Envie um e-mail, mande uma mensagem pelo WhatsApp ou me chama nas
-              redes sociais!
-            </p>
+            <p className="text-secondary">{t("sendMessage")}</p>
 
             <Contacts />
           </div>
 
           <form action="" className="flex flex-col gap-2 text-secondary">
-            <Input type="text" placeholder="Nome" />
-            <Input type="email" placeholder="E-mail" />
-            <Textarea placeholder="Escreva sua mensagem aqui" />
+            <Input type="text" placeholder={`${t("name")}`} />
+            <Input type="email" placeholder={`${t("email")}`} />
+            <Textarea placeholder={`${t("writeYourMessage")}`} />
 
             <div className="w-full object-fit pt-2">
               <Button
                 variant="secondary"
                 className="flex gap-2 text-foreground object-fit"
               >
-                <p>Envie sua mensagem</p>
+                <p>{t("sendYourMessage")}</p>
                 <ArrowRight />
               </Button>
             </div>

@@ -1,12 +1,13 @@
 "use client";
-import Header from "@/components/ui/Header";
 import ProjectItem from "@/components/ui/ProjectItem";
 import ScrollButton from "@/components/ui/ScrollButton";
 import projectsData from "@/utils/projectsData";
 import { ArrowUp } from "lucide-react";
-import { MouseEvent, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+  const { t } = useTranslation();
+
   return (
       <div id="header" className="flex flex-col pt-20 lg:max-w-[70rem]">
         <div className="flex flex-col gap-10 px-4 pb-10">
@@ -15,7 +16,7 @@ const Projects = () => {
               {"<"}Working{"/>"}
             </p>
             <h2 className="text-[3.5rem] text-primary leading-[3rem] font-bold">
-              Meus <br /> projetos
+              {t("my")} <br /> {t("projects")}
             </h2>
           </div>
 

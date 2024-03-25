@@ -6,7 +6,8 @@ import "./globals.css";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
 import { useState } from "react";
-import { useRouter } from "next/router";
+import { I18nextProvider } from 'react-i18next';
+import i18n from '../utils/i18n'
 
 const robotoSlab = Roboto_Slab({
   weight: ["300", "500", "700"],
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={robotoSlab.className}>
+      <I18nextProvider i18n={i18n}>
         <div
           className={`flex flex-col overflow-x-clip bg-background bg-cover pt-16 lg:items-center ${
             darkMode ? "dark" : ""
@@ -40,6 +42,7 @@ export default function RootLayout({
           <div className="flex-1">{children}</div>
           <Footer />
         </div>
+      </I18nextProvider>
       </body>
     </html>
   );

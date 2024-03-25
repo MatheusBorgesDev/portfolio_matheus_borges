@@ -17,6 +17,9 @@ import React, { useState, MouseEventHandler } from "react";
 import ScrollLink from "./ScrollLink";
 import { Separator } from "./separator";
 import { usePathname } from "next/navigation";
+import { useTranslation } from 'react-i18next';
+import i18n from "../../utils/i18n";
+
 
 interface HeaderProps {
   toggleDarkMode: MouseEventHandler<HTMLButtonElement>;
@@ -33,9 +36,13 @@ const Header = ({ toggleDarkMode, darkMode }: HeaderProps) => {
 
   const toggleLanguage = () => {
     setIsEnglish((prevState) => !prevState);
+    const newLanguage = isEnglish ? 'br' : 'en';
+    i18n.changeLanguage(newLanguage);
   };
 
   const isHomePage = usePathname() === "/";
+
+  const { t } = useTranslation()
 
   return (
     <Card className="fixed top-0 left-0 z-20 py-2 px-3 bg-foreground border-[.1rem] border-background-foreground rounded-none w-full lg:px-10">
@@ -57,19 +64,19 @@ const Header = ({ toggleDarkMode, darkMode }: HeaderProps) => {
               className="w-full bg-background rounded-b-lg border absolute top-[4rem] left-0 shadow-lg"
             >
               <ScrollLink pageElement={"projects"}>
-                <PresentationIcon /> Projetos
+                <PresentationIcon /> {t("projects")}
               </ScrollLink>
 
               <Separator />
 
               <ScrollLink pageElement={"about-me"}>
-                <CircleUserIcon /> Sobre mim
+                <CircleUserIcon /> {t("aboutMe")}
               </ScrollLink>
 
               <Separator />
 
               <ScrollLink pageElement={"contact"}>
-                <MessageCircleHeart /> Contato
+                <MessageCircleHeart /> {t("contact")}
               </ScrollLink>
 
               <Separator />
@@ -83,11 +90,11 @@ const Header = ({ toggleDarkMode, darkMode }: HeaderProps) => {
 
         <div className="flex items-center gap-20">
           <div className="hidden lg:flex">
-            <ScrollLink pageElement={"projects"}>Projetos</ScrollLink>
+            <ScrollLink pageElement={"projects"}>{t("projects")}</ScrollLink>
 
-            <ScrollLink pageElement={"about-me"}>Sobre mim</ScrollLink>
+            <ScrollLink pageElement={"about-me"}>{t("aboutMe")}</ScrollLink>
 
-            <ScrollLink pageElement={"contact"}>Contato</ScrollLink>
+            <ScrollLink pageElement={"contact"}>{t("contact")}</ScrollLink>
           </div>
 
           <div className="flex items-center gap-4 text-secondary">
