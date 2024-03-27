@@ -5,13 +5,13 @@ const resources = {
   en: {
     translation: {
       projects: "Projects",
-      my: "My",
+      myProjects: "My projects",
       aboutMe: "About me",
       contact: "Contact",
       greeting: "Hello, I'm Matheus Borges! 👋",
       developer: "Front-end Developer",
       seeProjects: "See projects",
-      featuredProjects: "Featured Projects",
+      featuredProjects: "Featured projects",
       seeAllProjects: "See all projects",
       aboutMeFirstDescription:
         "About a year and a half ago, I began to take my first steps into the world of programming, and from the first lines of code, I discovered my true vocation.",
@@ -30,7 +30,7 @@ const resources = {
   br: {
     translation: {
       projects: "Projetos",
-      my: "Meus",
+      myProjects: "Meus projetos",
       aboutMe: "Sobre mim",
       contact: "Contato",
       greeting: "Olá, Matheus Borges aqui! 👋",

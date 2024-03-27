@@ -4,9 +4,11 @@ import ScrollButton from "@/components/ui/ScrollButton";
 import projectsData from "@/utils/projectsData";
 import { ArrowUp } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import i18n from "../../utils/i18n";
 
 const Projects = () => {
   const { t } = useTranslation();
+  const language = i18n.language;
 
   return (
       <div id="header" className="flex flex-col pt-20 lg:max-w-[70rem]">
@@ -16,7 +18,7 @@ const Projects = () => {
               {"<"}Working{"/>"}
             </p>
             <h2 className="text-[3.5rem] text-primary leading-[3rem] font-bold">
-              {t("my")} <br /> {t("projects")}
+              {t("myProjects")}
             </h2>
           </div>
 
@@ -26,13 +28,17 @@ const Projects = () => {
                 key={project.id}
                 project={{
                   id: project.id,
-                  name: project.name,
-                  intro: project.intro,
-                  description: project.description,
-                  images: [project.images[0]],
-                  techs: project.techs,
-                  demoLink: project.demoLink,
-                  gitLink: project.gitLink,
+                      name: project.name,
+                      intro:
+                        language == "en" ? project.introEn : project.introBr,
+                      description:
+                        language == "en"
+                          ? project.descriptionEn
+                          : project.descriptionBr,
+                      images: [project.images[0]],
+                      techs: project.techs,
+                      demoLink: project.demoLink,
+                      gitLink: project.gitLink,
                 }}
               />
             ))}
