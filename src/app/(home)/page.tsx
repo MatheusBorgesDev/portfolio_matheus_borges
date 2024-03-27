@@ -69,8 +69,12 @@ export default function Home() {
                     project={{
                       id: project.id,
                       name: project.name,
-                      intro: language == "en" ? (project.introEn) : (project.introBr),
-                      description: language == "en" ? (project.descriptionEn) : (project.descriptionBr),
+                      intro:
+                        language == "en" ? project.introEn : project.introBr,
+                      description:
+                        language == "en"
+                          ? project.descriptionEn
+                          : project.descriptionBr,
                       images: [project.images[0]],
                       techs: project.techs,
                       demoLink: project.demoLink,
