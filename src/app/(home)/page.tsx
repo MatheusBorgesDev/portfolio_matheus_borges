@@ -20,9 +20,11 @@ import Link from "next/link";
 import projectsData from "@/utils/projectsData";
 import Contacts from "@/components/ui/Contacts";
 import { useTranslation } from "react-i18next";
+import i18n from "../../utils/i18n";
 
 export default function Home() {
   const { t } = useTranslation();
+  const language = i18n.language;
 
   return (
     <main
@@ -67,8 +69,8 @@ export default function Home() {
                     project={{
                       id: project.id,
                       name: project.name,
-                      intro: project.intro,
-                      description: project.description,
+                      intro: language == "en" ? (project.introEn) : (project.introBr),
+                      description: language == "en" ? (project.descriptionEn) : (project.descriptionBr),
                       images: [project.images[0]],
                       techs: project.techs,
                       demoLink: project.demoLink,

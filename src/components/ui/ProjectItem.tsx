@@ -9,6 +9,7 @@ import {
   GlobeIcon,
 } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger, DialogClose } from "./dialog";
+import { useTranslation } from "react-i18next";
 
 interface ProjectItemProps {
   project: {
@@ -24,6 +25,8 @@ interface ProjectItemProps {
 }
 
 const ProjectItem = ({ project }: ProjectItemProps) => {
+  const { t } = useTranslation();
+
   return (
     <Dialog>
       <DialogTrigger>
@@ -35,7 +38,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
               height={0}
               className="h-[20rem] w-auto rounded-lg"
               sizes="100%"
-              alt={`Home page of ${project.name}`}
+              alt={`Preview of ${project.name}`}
             />
 
             <div className="flex flex-col gap-4 w-full p-4 rounded-lg">
@@ -55,7 +58,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
                           height={0}
                           className="h-auto w-[2rem] rounded-xl"
                           sizes="100vw"
-                          alt="Ícone de tecnologia"
+                          alt="Tech icon"
                         />
                       ))}
                     </div>
@@ -78,7 +81,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
         </DialogClose>
 
         <div className="flex w-full justify-between items-center text-3xl text-primary font-bold">
-          {project?.name}
+          {project.name}
           <div className="flex">
             {project?.techs.map((tech) => (
               <Image
@@ -88,7 +91,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
                 height={0}
                 className="h-auto w-[2rem] rounded-xl"
                 sizes="100vw"
-                alt="Ícone de tecnologia"
+                alt="Tech icon"
               />
             ))}
           </div>
@@ -101,13 +104,17 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
             height={0}
             className="h-[15rem] w-full object-cover rounded-lg"
             sizes="100%"
-            alt="Foto do projeto"
+            alt={`Preview of ${project.name}`}
           />
 
           <h2 className="font-bold text-lg text-secondary">{project.intro}</h2>
 
           <div className="flex flex-col rounded-lg gap-4 p-4 shadow-greenNeon text-secondary overflow-y-auto">
-            <p className="text-sm opacity-80">{project.description}</p>
+            <p className="text-sm opacity-85">
+              <div className="whitespace-pre-wrap overflow-x-auto max-w-full">
+                {project.description}
+              </div>
+            </p>
           </div>
 
           <div className="flex flex-col justify-between items-center w-full gap-4">
@@ -127,7 +134,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
                 className="flex justify-between w-full items-center"
                 target="_blank"
               >
-                <GithubIcon /> Código <ArrowUpRightIcon />{" "}
+                <GithubIcon /> {t("code")} <ArrowUpRightIcon />{" "}
               </Link>
             </Button>
           </div>

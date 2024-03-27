@@ -2,140 +2,236 @@ const projectsData = [
   {
     id: "gitfav",
     name: "GitFav",
-    intro: "Application to bookmark GitHub users",
-    description: `Project built during classes on the Explorer trail at Rocketseat educational institution.
-
-    The challenge was to create all the application's HTML, CSS and JavaScript from a FIGMA model, using DOM and ES Modules (EcmaScript 6 - ES6) focusing on the concepts:
-    
-    API (Application Programming Interface);
-    SPA (Single Page Application);
-    Object orientation;
-    Classes and inheritance in JavaScript;
-    JSON;
-    Asynchronous JavaScript;
-    Promises with async/await;
-    Principle of immutability;
-    Try, catch, throw.
-    Reinforcing knowledge about HTML, CSS, JavaScript, DOM, node, events, code refactoring, clean code, accessibility and JS modules.`,
-    images: ["gitfav-img1.png", "gitfav-img2.png"],
-
     techs: ["html", "css", "javascript"],
+    images: ["gitfav-img1.png", "gitfav-img2.png"],
     demoLink: "https://matheusborgesdev.github.io/GitFav-Bookmark-GitHub-users",
     gitLink: "https://github.com/MatheusBorgesDev/GitFav-Bookmark-GitHub-users",
+    introEn: "Favorite GitHub users",
+    introBr: "Favorite usuários do GitHub",
+    descriptionEn: `Application created to enter favorite GitHub users and create a list of them.
+
+Project designed to develop knowledge of:
+- GitHub API
+- Object orientation
+- Classes and inheritance in JavaScript
+- Promises
+- Principle of immutability
+- Try, catch, throw.`,
+    descriptionBr: `Aplicação criada para inserir os usuários favoritos do GitHub e criar uma lista com eles.
+    
+Projeto feito para desenvolver conhecimentos em:
+  - GitHub API
+  - Orientação à objeto
+  - Classes and inheritance in JavaScript
+  - Promises
+  - Principle of immutability
+  - Try, catch, throw.`,
   },
 
   {
     id: "bmi-calculator",
     name: "BMI Calculator",
-    intro:
-      "An application that captures the user's weight and height to display their BMI.",
-    description: `Project built during classes on the Explorer trail at Rocketseat educational institution.
-
-    The classes aimed to use DOM and ES Modules (EcmaScript 6 - ES6).
-    
-    Introducing and reinforcing knowledge about HTML, CSS, JavaScript, DOM, Node, events, code refactoring and JS modules.`,
-    images: ["bmi-calculator-img1.png", "bmi-calculator-img2.png"],
     techs: ["html", "css", "javascript"],
+    images: ["bmi-calculator-img1.png", "bmi-calculator-img2.png"],
     demoLink: "https://matheusborgesdev.github.io/Calculadora-de-IMC",
     gitLink: "https://github.com/MatheusBorgesDev/Calculadora-de-IMC",
+    introEn: "Know your body mass index",
+    introBr: "Saiba seu índice de massa corporal",
+    descriptionEn: `An application that takes the user's weight and height to display their BMI.
+
+Project designed to develop skills in:
+- DOM
+- EcmaScript 6
+- Events
+- Nodes`,
+    descriptionBr: `Uma aplicação que mostra o IMC do usuário através do peso e altura fornecidos.
+
+Projeto feito para desenvolver conhecimentos em:
+- DOM
+- EcmaScript 6
+- Events
+- Nodes`,
   },
 
   {
     id: "timer2",
     name: "Timer 2.0",
-    intro: "Program your alarm, with different ambient sound options.",
-    description: `Project built as a challenge to the student during during classes on Explorer trail at Rocketseat educational institution.
-
-    The challenge was to create all the HTML, CSS and JavaScript of the application from a FIGMA model, using DOM and ES Modules (EcmaScript 6 - ES6) to build the functionalities of an alarm clock in which the user increases or decreases the timer by 5 minutes, with 4 background music options and their respective volume controls. We also worked on the dark mode option on the page.
-    
-    We reinforce knowledge about HTML, CSS, JavaScript, DOM, node, events, code refactoring, clean code and separating JS into modules.`,
-    images: ["timer2-img1.png", "timer2-img2.png"],
     techs: ["html", "css", "javascript"],
+    images: ["timer2-img1.png", "timer2-img2.png"],
     demoLink: "https://matheusborgesdev.github.io/Timer-2.0",
     gitLink: "https://github.com/MatheusBorgesDev/Timer-2.0",
+    introEn: "Set your time and your mood",
+    introBr: "Defina seu tempo e seu ambiente",
+    descriptionEn: `An alarm clock that can be programmed by the user, with different ambient sound options.
+
+Project designed to develop skills in:
+- JavaScript
+- DOM
+- EcmaScript 6
+- Events
+- Dark Mode`,
+    descriptionBr: `Um despertador que pode ser programado pelo usuário, com diferentes opções de som ambiente.
+
+Projeto feito para desenvolver conhecimentos em:
+- JavaScript
+- DOM
+- EcmaScript 6
+- Events
+- Dark Mode`,
   },
 
   {
     id: "fortune-cookie",
     name: "Fortune Cookie",
-    intro: "An application to generate random phrases when user clicks",
-    description: `Project built during classes on the Explorer trail at Rocketseat educational institution.
-
-    The classes aimed to use DOM in JavaScript, introducing knowledge about node, events and callback functions.`,
-    images: ["fortune-cookie-img1.png", "fortune-cookie-img2.png"],
     techs: ["html", "css", "javascript"],
+    images: ["fortune-cookie-img1.png", "fortune-cookie-img2.png"],
     demoLink: "https://matheusborgesdev.github.io/Fortune-Cookie",
     gitLink: "https://github.com/MatheusBorgesDev/Fortune-Cookie",
+    introEn: "Check your luck for today",
+    introBr: "Veja sua sorte para hoje",
+    descriptionEn: `An application to generate random phrases when the user clicks on the cookie.
+
+Project designed to develop knowledge of:
+- HTML
+- CSS
+- JavaScript
+- DOM`,
+    descriptionBr: `Uma aplicação para gerar frases aleatórias quando o usuário clicar no biscoito.
+
+Projeto feito para desenvolver conhecimentos em:
+- HTML
+- CSS
+- JavaScript
+- DOM`,
   },
 
   {
     id: "timer",
     name: "Timer",
-    intro: "An alarm clock that can be timed by the user.",
-    description: `Project built during classes on the Explorer trail at Rocketseat educational institution.
-
-    The classes aimed to use DOM and ES Modules (EcmaScript 6 - ES6) to build an alarm clock that can have its time programmed by the user. We also work with the insertion of audio in the application.
-    
-    We reinforce knowledge about HTML, CSS, JavaScript, DOM, node, events, code refactoring and separating JS into modules.`,
-    images: ["timer-img1.png", "timer-img2.png"],
     techs: ["html", "css", "javascript"],
+    images: ["timer-img1.png", "timer-img2.png"],
     demoLink: "https://matheusborgesdev.github.io/Timer",
     gitLink: "https://github.com/MatheusBorgesDev/Timer",
+    introEn: "Set an alarm",
+    introBr: "Defina um alarme",
+    descriptionEn: `An alarm clock that can be set by the user.
+
+Project designed to develop knowledge of:
+- HTML
+- CSS
+- JavaScript
+- ECMAScript 6
+- DOM
+- Figma`,
+    descriptionBr: `Um despertador que pode ser definido pelo usuário.
+
+Projeto feito para desenvolver conhecimentos em:
+- HTML
+- CSS
+- JavaScript
+- ECMAScript 6
+- DOM
+- Figma`,
   },
 
   {
     id: "game-stream-fav",
     name: "Games & Streams",
-    intro:
-      "A website template to highlight the user's favorite games and streamers",
-    description: `Project built during the Rocketseat educational institution's Next Level event.
-
-    The classes aimed to build the application's HTML and CSS from a Figma model.`,
-    images: ["game-stream-fav-img1.png"],
     techs: ["html", "css"],
+    images: ["game-stream-fav-img1.png"],
     demoLink:
       "https://matheusborgesdev.github.io/My-favorite-games-and-streamers",
     gitLink:
       "https://github.com/MatheusBorgesDev/My-favorite-games-and-streamers",
+    introEn: "My favorite games and streamers",
+    introBr: "Meus jogos e streamers favoritos",
+    descriptionEn: `A website template to highlight the user's favorite games and streamers
+
+Project designed to develop knowledge of:
+- HTML
+- CSS
+- Figma`,
+    descriptionBr: `Um modelo de website para destacar os jogos e streamers favoritos do usuário
+    
+Projeto desenvolvido para desenvolver conhecimentos em:
+- HTML
+- CSS
+- Figma`,
   },
 
   {
     id: "advanced-form",
     name: "Advanced Form",
-    intro: "A form with several different inputs for the user to submit",
-    description: `Project built during classes on the Explorer trail at Rocketseat educational institution.
-
-    The classes had the objective of building the application's HTML and CSS from a Figma model, with emphasis on the styling of the input and checkbox fields.`,
-    images: ["advanced-form-img1.png"],
     techs: ["html", "css"],
+    images: ["advanced-form-img1.png"],
     demoLink: "https://matheusborgesdev.github.io/Advanced-form",
     gitLink: "https://github.com/MatheusBorgesDev/Advanced-form",
+    introEn: "Complete the form",
+    introBr: "Preencha o formulário",
+    descriptionEn: `A form with several different inputs for the user to submit.
+
+Project designed to develop knowledge of:
+- HTML
+- CSS
+- Inputs
+- Figma`,
+    descriptionBr: `Um formulário com vários tipos de input para o usuário submeter.
+
+Projeto criado para desenvolver conhecimentos em:
+- HTML
+- CSS
+- Inputs
+- Figma`,
   },
 
   {
     id: "space-cream",
     name: "Space Cream",
-    intro: "One page template for an ice cream shop",
-    description: `Project built during classes on the Explorer trail at Rocketseat educational institution.
-
-    The challenge was to create all the HTML and CSS from a FIGMA model, improving knowledge about display grid, responsiveness, mobile first, transitions, transformations and animations with CSS.`,
-    images: ["space-cream-img1.png", "space-cream-img2.png"],
     techs: ["html", "css"],
+    images: ["space-cream-img1.png", "space-cream-img2.png"],
     demoLink: "https://matheusborgesdev.github.io/Space-Cream",
     gitLink: "https://github.com/MatheusBorgesDev/Space-Cream",
+    introEn: "Taste the grid style",
+    introBr: "Experimente o sabor do display grid",
+    descriptionEn: `One page template for an ice cream shop with display grid style;
+
+Project designed to develop knowledge of:
+- HTML
+- CSS
+- Grid display
+- Responsiveness
+- Mobile First
+- Transitions, transformations and animations with CSS`,
+    descriptionBr: `Projeto feito para desenvolver conhecimentos em:
+- HTML
+- CSS
+- Display Grid
+- Responsividade
+- Mobile First
+- Transitions, transformations e animations com CSS`,
   },
 
   {
     id: "rocket-sect",
     name: "RocketSect",
-    intro: "A homepage template for a security company.",
-    description: `Project built during classes on the Explorer trail at Rocketseat educational institution.
-
-    The classes aimed to build the application's HTML and CSS from a Figma model.`,
-    images: ["rocket-sect-img1.png"],
     techs: ["html", "css"],
+    images: ["rocket-sect-img1.png"],
     demoLink: "https://matheusborgesdev.github.io/Rocket-Sect",
     gitLink: "https://github.com/MatheusBorgesDev/Rocket-Sect",
+    introEn: "Safety first",
+    introBr: "Segurança em 1º lugar",
+    descriptionEn: `A home page template for a security company.
+
+Project designed to develop knowledge of:
+- HTML
+- CSS
+- Figma`,
+    descriptionBr: `Um modelo de página inicial para uma empresa de segurança.
+
+Projeto criado para desenvolver conhecimentos em:
+- HTML
+- CSS
+- Figma`,
   },
 ];
 
