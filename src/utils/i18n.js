@@ -20,10 +20,11 @@ const resources = {
       workTogether: "Let's work together",
       sendMessage:
         "Send me an email, a WhatsApp message or call me on social media!",
-      name: "Nome",
+      name: "Name",
       email: "Email",
       writeYourMessage: "Write your message here",
       sendYourMessage: "Send your message",
+      code: "Code",
     },
   },
   br: {
@@ -48,6 +49,7 @@ const resources = {
       email: "E-mail",
       writeYourMessage: "Escreva sua mensagem aqui",
       sendYourMessage: "Envie sua mensagem",
+      code: "Código"
     },
   },
 };
