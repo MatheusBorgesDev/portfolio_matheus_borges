@@ -38,10 +38,10 @@ export default function Home() {
         <Profile />
 
         <div className="flex flex-col gap-4 lg:justify-center">
-          <h1 className="text-lg text-secondary font-bold opacity-90 ">
+          <h1 className="text-lg text-secondary font-bold opacity-90">
             {t("greeting")}
           </h1>
-          <h2 className="text-[3rem] lg:text-[3.5rem] text-primary leading-[3rem] font-bold pb-4 w-full">
+          <h2 className="text-[3rem] lg:text-[3.5rem] text-primary leading-[3rem] font-bold pb-4 max-w-[20rem]">
             {t("developer")}.
           </h2>
           <div className="flex justify-center">
