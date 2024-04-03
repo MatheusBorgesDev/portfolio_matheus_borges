@@ -35,7 +35,7 @@ const Projects = () => {
                         language == "en"
                           ? project.descriptionEn
                           : project.descriptionBr,
-                      images: [project.images[0]],
+                      image: project.image,
                       techs: project.techs,
                       demoLink: project.demoLink,
                       gitLink: project.gitLink,
