@@ -1,22 +1,47 @@
 const projectsData = [
   {
+    id: "voice-notes",
+    name: "Voice Notes",
+    techs: ["react", "typescript", "tailwind"],
+    image: "voice-notes.png",
+    demoLink: "https://matheusborgesdev.github.io/GitFav-Bookmark-GitHub-users",
+    gitLink: "https://github.com/MatheusBorgesDev/GitFav-Bookmark-GitHub-users",
+    introEn: "Create notes using voice",
+    introBr: "Crie suas notas usando voz",
+    descriptionEn: `Application created to save notes using voice, by browser's native speech recognition API.
+
+Project designed to develop skills in:
+  - React
+  - Typescript
+  - Tailwind
+  - Speech recognition API`,
+    descriptionBr: `Aplicação criada para guardar notas utilizando voz, através da API de reconhecimento de voz nativa do navegador.
+    
+Projeto feito para desenvolver conhecimentos em:
+  - React
+  - Typescript
+  - Tailwind
+  - Speech recognition API`,
+  },
+
+  {
     id: "gitfav",
     name: "GitFav",
     techs: ["html", "css", "javascript"],
-    images: ["gitfav-img1.png", "gitfav-img2.png"],
+    image: "gitfav.png",
     demoLink: "https://matheusborgesdev.github.io/GitFav-Bookmark-GitHub-users",
     gitLink: "https://github.com/MatheusBorgesDev/GitFav-Bookmark-GitHub-users",
     introEn: "Favorite GitHub users",
     introBr: "Favorite usuários do GitHub",
     descriptionEn: `Application created to enter favorite GitHub users and create a list of them.
 
-Project designed to develop knowledge of:
-- GitHub API
-- Object orientation
-- Classes and inheritance in JavaScript
-- Promises
-- Principle of immutability
-- Try, catch, throw.`,
+Project designed to develop skills in:
+  - GitHub API
+  - Object orientation
+  - Classes and inheritance in JavaScript
+  - Promises
+  - Principle of immutability
+  - Try, catch, throw.`,
     descriptionBr: `Aplicação criada para inserir os usuários favoritos do GitHub e criar uma lista com eles.
     
 Projeto feito para desenvolver conhecimentos em:
@@ -32,7 +57,7 @@ Projeto feito para desenvolver conhecimentos em:
     id: "bmi-calculator",
     name: "BMI Calculator",
     techs: ["html", "css", "javascript"],
-    images: ["bmi-calculator-img1.png", "bmi-calculator-img2.png"],
+    image: "bmi-calculator.png",
     demoLink: "https://matheusborgesdev.github.io/Calculadora-de-IMC",
     gitLink: "https://github.com/MatheusBorgesDev/Calculadora-de-IMC",
     introEn: "Know your body mass index",
@@ -57,7 +82,7 @@ Projeto feito para desenvolver conhecimentos em:
     id: "timer2",
     name: "Timer 2.0",
     techs: ["html", "css", "javascript"],
-    images: ["timer2-img1.png", "timer2-img2.png"],
+    image: "timer2.png",
     demoLink: "https://matheusborgesdev.github.io/Timer-2.0",
     gitLink: "https://github.com/MatheusBorgesDev/Timer-2.0",
     introEn: "Set your time and your mood",
@@ -84,7 +109,7 @@ Projeto feito para desenvolver conhecimentos em:
     id: "fortune-cookie",
     name: "Fortune Cookie",
     techs: ["html", "css", "javascript"],
-    images: ["fortune-cookie-img1.png", "fortune-cookie-img2.png"],
+    image: "fortune-cookie.png",
     demoLink: "https://matheusborgesdev.github.io/Fortune-Cookie",
     gitLink: "https://github.com/MatheusBorgesDev/Fortune-Cookie",
     introEn: "Check your luck for today",
@@ -109,7 +134,7 @@ Projeto feito para desenvolver conhecimentos em:
     id: "timer",
     name: "Timer",
     techs: ["html", "css", "javascript"],
-    images: ["timer-img1.png", "timer-img2.png"],
+    image: "timer.png",
     demoLink: "https://matheusborgesdev.github.io/Timer",
     gitLink: "https://github.com/MatheusBorgesDev/Timer",
     introEn: "Set an alarm",
@@ -138,7 +163,7 @@ Projeto feito para desenvolver conhecimentos em:
     id: "game-stream-fav",
     name: "Games & Streams",
     techs: ["html", "css"],
-    images: ["game-stream-fav-img1.png"],
+    image: "game-stream-fav.png",
     demoLink:
       "https://matheusborgesdev.github.io/My-favorite-games-and-streamers",
     gitLink:
@@ -163,7 +188,7 @@ Projeto desenvolvido para desenvolver conhecimentos em:
     id: "advanced-form",
     name: "Advanced Form",
     techs: ["html", "css"],
-    images: ["advanced-form-img1.png"],
+    image: "advanced-form.png",
     demoLink: "https://matheusborgesdev.github.io/Advanced-form",
     gitLink: "https://github.com/MatheusBorgesDev/Advanced-form",
     introEn: "Complete the form",
@@ -188,7 +213,7 @@ Projeto criado para desenvolver conhecimentos em:
     id: "space-cream",
     name: "Space Cream",
     techs: ["html", "css"],
-    images: ["space-cream-img1.png", "space-cream-img2.png"],
+    image: "space-cream.png",
     demoLink: "https://matheusborgesdev.github.io/Space-Cream",
     gitLink: "https://github.com/MatheusBorgesDev/Space-Cream",
     introEn: "Taste the grid style",
@@ -215,7 +240,7 @@ Project designed to develop knowledge of:
     id: "rocket-sect",
     name: "RocketSect",
     techs: ["html", "css"],
-    images: ["rocket-sect-img1.png"],
+    image: "rocket-sect.png",
     demoLink: "https://matheusborgesdev.github.io/Rocket-Sect",
     gitLink: "https://github.com/MatheusBorgesDev/Rocket-Sect",
     introEn: "Safety first",

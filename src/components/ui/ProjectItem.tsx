@@ -17,7 +17,7 @@ interface ProjectItemProps {
     name: string;
     intro: string;
     description?: string;
-    images: string[];
+    image: string;
     techs: string[];
     demoLink: string;
     gitLink: string;
@@ -33,7 +33,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
         <div className="shadow-green rounded-lg">
           <Card className="flex flex-col border-2 border-foreground p-1 my-3 min-h-[24rem] w-[20rem] rounded-lg backdrop-blur-md">
             <Image
-              src={`/projects-images/${project.images[0]}`}
+              src={`/projects-images/${project.image}`}
               width={0}
               height={0}
               className="h-[20rem] w-auto rounded-lg"
@@ -99,7 +99,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
 
         <div className="flex flex-col gap-4 min-h-full">
           <Image
-            src={`/projects-images/${project?.images[0]}`}
+            src={`/projects-images/${project?.image}`}
             width={0}
             height={0}
             className="h-[15rem] w-full object-cover rounded-lg"
