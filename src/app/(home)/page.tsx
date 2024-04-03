@@ -61,7 +61,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col gap-8 relative">
-          <Carousel className="rounded-lg bg-card">
+          <Carousel className="rounded-lg bg-background">
             <CarouselContent className="ml-4 cursor-grab active:cursor-grabbing">
               {projectsData.map((project) => (
                 <CarouselItem key={project.id} className="basis-3/3 px-5">

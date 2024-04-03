@@ -31,7 +31,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
     <Dialog>
       <DialogTrigger>
         <div className="shadow-green rounded-lg">
-          <Card className="flex flex-col border-2 border-foreground p-1 my-3 min-h-[24rem] w-[20rem] rounded-lg backdrop-blur-md">
+          <Card className="flex flex-col border-2 bg-foreground border-foreground p-1 my-3 min-h-[24rem] w-[20rem] rounded-lg backdrop-blur-md">
             <Image
               src={`/projects-images/${project.image}`}
               width={0}
