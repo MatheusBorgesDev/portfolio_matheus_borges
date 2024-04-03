@@ -4,8 +4,8 @@ const projectsData = [
     name: "Voice Notes",
     techs: ["react", "typescript", "tailwind"],
     image: "voice-notes.png",
-    demoLink: "https://matheusborgesdev.github.io/GitFav-Bookmark-GitHub-users",
-    gitLink: "https://github.com/MatheusBorgesDev/GitFav-Bookmark-GitHub-users",
+    demoLink: "https://matheusborgesdev.github.io/Voice-Notes",
+    gitLink: "https://github.com/MatheusBorgesDev/Voice-Notes",
     introEn: "Create notes using voice",
     introBr: "Crie suas notas usando voz",
     descriptionEn: `Application created to save notes using voice, by browser's native speech recognition API.
