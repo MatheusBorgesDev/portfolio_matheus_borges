@@ -17,9 +17,9 @@ import React, { useState, MouseEventHandler } from "react";
 import ScrollLink from "./ScrollLink";
 import { Separator } from "./separator";
 import { usePathname } from "next/navigation";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import i18n from "../../utils/i18n";
-
+import { Button } from "./button";
 
 interface HeaderProps {
   toggleDarkMode: MouseEventHandler<HTMLButtonElement>;
@@ -36,13 +36,13 @@ const Header = ({ toggleDarkMode, darkMode }: HeaderProps) => {
 
   const toggleLanguage = () => {
     setIsEnglish((prevState) => !prevState);
-    const newLanguage = isEnglish ? 'br' : 'en';
+    const newLanguage = isEnglish ? "br" : "en";
     i18n.changeLanguage(newLanguage);
   };
 
   const isHomePage = usePathname() === "/";
 
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <Card className="fixed top-0 left-0 z-20 py-2 px-3 bg-foreground border-[.1rem] border-background-foreground rounded-none w-full lg:px-10">
@@ -88,14 +88,22 @@ const Header = ({ toggleDarkMode, darkMode }: HeaderProps) => {
           <Logo />
         </Link>
 
-        <div className="flex items-center gap-20">
-          <div className="hidden lg:flex">
-            <ScrollLink pageElement={"projects"}>{t("projects")}</ScrollLink>
+        <div className="flex items-center gap-10">
+          {isHomePage ? (
+            <div className="hidden lg:flex">
+              <ScrollLink pageElement={"projects"}>{t("projects")}</ScrollLink>
 
-            <ScrollLink pageElement={"about-me"}>{t("aboutMe")}</ScrollLink>
+              <ScrollLink pageElement={"about-me"}>{t("aboutMe")}</ScrollLink>
 
-            <ScrollLink pageElement={"contact"}>{t("contact")}</ScrollLink>
-          </div>
+              <ScrollLink pageElement={"contact"}>{t("contact")}</ScrollLink>
+            </div>
+          ) : (
+            <Link href="/" className="hidden lg:flex">
+              <Button variant="link" className="text-lg">
+                Home
+              </Button>
+            </Link>
+          )}
 
           <div className="flex items-center gap-4 text-secondary">
             <button onClick={toggleLanguage} className="w-6 text-lg">

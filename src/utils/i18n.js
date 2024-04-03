@@ -17,7 +17,7 @@ const resources = {
         "About a year and a half ago, I began to take my first steps into the world of programming, and from the first lines of code, I discovered my true vocation.",
       aboutMeSecondDescription:
         "Today, I'm passionate about the art of programming and I'm looking for the first opportunity to start my career.",
-      workTogether: "Let's work together",
+      workTogether: "Let's work together?",
       sendMessage:
         "Send me an email, a WhatsApp message or call me on social media!",
       name: "Name",
