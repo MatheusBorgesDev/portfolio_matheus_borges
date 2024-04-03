@@ -64,7 +64,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
                     </div>
                   )}
                 </div>
-                <p className="text-secondary text-left font-light w-full text-sm truncate">
+                <p className="text-secondary text-left w-full text-sm truncate">
                   {project.intro}
                 </p>
               </div>
