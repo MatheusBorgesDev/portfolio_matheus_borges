@@ -31,7 +31,7 @@ export default function RootLayout({
       <body className={robotoSlab.className}>
       <I18nextProvider i18n={i18n}>
         <div
-          className={`flex flex-col overflow-x-clip bg-background bg-cover pt-16 lg:items-center ${
+          className={`flex flex-col overflow-x-clip bg-background pt-16 lg:items-center ${
             darkMode ? "dark" : ""
           }`}
         >

@@ -25,6 +25,7 @@ const config = {
       },
       backgroundImage: {
         bgLight: "url('/bglight.png')",
+        bgDark: "url('/bgdark.png')",
       },
       colors: {
         border: "hsl(var(--border))",

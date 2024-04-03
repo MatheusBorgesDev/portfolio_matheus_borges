@@ -26,6 +26,8 @@ export default function Home() {
   const { t } = useTranslation();
   const language = i18n.language;
 
+  const featuredProjectsArray = projectsData.slice(0, 5);
+
   return (
     <main
       id="header"
@@ -63,7 +65,7 @@ export default function Home() {
         <div className="flex flex-col gap-8 relative">
           <Carousel className="rounded-lg bg-background">
             <CarouselContent className="ml-4 cursor-grab active:cursor-grabbing">
-              {projectsData.map((project) => (
+              {featuredProjectsArray.map((project) => (
                 <CarouselItem key={project.id} className="basis-3/3 px-5">
                   <ProjectItem
                     project={{
@@ -113,7 +115,7 @@ export default function Home() {
         </div>
 
         <div className="flex gap-2">
-          <div className="min-w-[10rem] min-h-full max-h-full lg:min-h-[20rem] rounded-xl">
+          <div className="min-w-[10rem] w-[20rem] max-h-full min-h-[20rem] rounded-xl">
             <Image
               src="https://github.com/MatheusBorgesDev.png"
               width={0}
