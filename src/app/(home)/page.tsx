@@ -149,9 +149,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col w-fit rounded-xl bg-foreground gap-4 flex-wrap my-4 p-5 shadow-greenNeon">
+        <div className="flex flex-col w-full rounded-xl bg-foreground gap-4 flex-wrap my-4 p-5 shadow-greenNeon">
           <div className="flex flex-col gap-4">
-            <p className="text-secondary">{t("sendMessage")}</p>
+            <p className="text-secondary text-center">{t("sendMessage")}</p>
 
             <div className="flex justify-center">
               <Contacts />
