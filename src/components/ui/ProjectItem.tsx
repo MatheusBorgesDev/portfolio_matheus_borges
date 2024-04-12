@@ -73,7 +73,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
         </div>
       </DialogTrigger>
 
-      <DialogContent className="bg-foreground max-w-full w-[400px] md:w-[500px] rounded-lg flex flex-col gap-4 max-h-[95%] p-6">
+      <DialogContent className="bg-foreground max-w-[98%] w-[400px] md:w-[500px] rounded-lg flex flex-col gap-4 max-h-[98%] p-6">
         <DialogClose className="flex items-start">
           <Button type="button">
             <ArrowLeft />
