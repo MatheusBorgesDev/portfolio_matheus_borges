@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <main
       id="header"
-      className="flex flex-col pt-20 md:px-[5%] lg:max-w-[70rem]"
+      className="flex flex-col pt-20 md:px-[5%] lg:max-w-[70rem] animate-fade-right animate-once animate-ease-in-out animate-normal animate-fill-both transition-opacity duration-500"
     >
       <div
         id="profile"

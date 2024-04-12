@@ -11,7 +11,7 @@ const Projects = () => {
   const language = i18n.language;
 
   return (
-      <div id="header" className="flex flex-col pt-20 lg:max-w-[70rem]">
+      <div id="header" className="flex flex-col pt-20 lg:max-w-[70rem] animate-fade-right animate-once animate-ease-in-out animate-normal animate-fill-both">
         <div className="flex flex-col gap-10 px-4 pb-10">
           <div>
             <p className="text-md text-secondary font-bold opacity-80">
