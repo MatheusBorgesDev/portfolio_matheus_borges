@@ -149,14 +149,16 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col rounded-xl bg-foreground backdrop-blur-lg gap-4 flex-wrap my-4 p-5 shadow-greenNeon ">
+        <div className="flex flex-col w-fit rounded-xl bg-foreground gap-4 flex-wrap my-4 p-5 shadow-greenNeon">
           <div className="flex flex-col gap-4">
             <p className="text-secondary">{t("sendMessage")}</p>
 
-            <Contacts />
+            <div className="flex justify-center">
+              <Contacts />
+            </div>
           </div>
 
-          <form action="" className="flex flex-col gap-2 text-secondary">
+          {/* <form action="" className="flex flex-col gap-2 text-secondary">
             <Input type="text" placeholder={`${t("name")}`} />
             <Input type="email" placeholder={`${t("email")}`} />
             <Textarea placeholder={`${t("writeYourMessage")}`} />
@@ -170,7 +172,7 @@ export default function Home() {
                 <ArrowRight />
               </Button>
             </div>
-          </form>
+          </form> */}
         </div>
       </div>
       <ScrollButton pageElement="header">
