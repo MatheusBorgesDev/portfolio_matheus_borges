@@ -75,7 +75,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
 
       <DialogContent className="bg-foreground max-w-[98%] w-[400px] md:w-[500px] rounded-lg flex flex-col gap-4 max-h-[98%] p-6">
         <DialogClose className="flex items-start">
-          <Button type="button">
+          <Button type="button" className="size-8 p-0">
             <ArrowLeft />
           </Button>
         </DialogClose>
@@ -102,7 +102,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
             src={`/projects-images/${project?.image}`}
             width={0}
             height={0}
-            className="h-[15rem] w-full object-cover rounded-lg"
+            className="h-[10rem] md:h-[15rem] w-full object-cover object-top rounded-lg"
             sizes="100%"
             alt={`Preview of ${project.name}`}
           />
