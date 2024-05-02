@@ -1,8 +1,68 @@
 const projectsData = [
   {
+    id: "2-do-list",
+    name: "2Do List",
+    techs: ["react", "vite", "typescript", "tailwind"],
+    image: "2-do-list.png",
+    demoLink: "https://matheusborgesdev.github.io/2-do-list/",
+    gitLink: "https://github.com/MatheusBorgesDev/2-do-list",
+    introEn: "Control and organize your daily tasks",
+    introBr: "Controle e organize suas tarefas diárias",
+    descriptionEn: `Application created to make a to do list.
+
+Project designed to develop skills in:
+  - React+Vite
+  - Typescript
+  - Tailwind
+  - States,
+  - Principle of immutability,
+  - Properties,
+  - Hooks`,
+    descriptionBr: `Aplicação desenvolvida para criar uma lista de tarefas.
+    
+Projeto feito para desenvolver conhecimentos em:
+  - React+Vite
+  - Typescript
+  - Tailwind
+  - Estados,
+  - Princípio da imutabilidade,
+  - Propriedades,
+  - Hooks`,
+  },
+
+  {
+    id: "ignite-feed",
+    name: "Ignite Feed",
+    techs: ["react", "vite", "typescript", "tailwind"],
+    image: "ignite-feed.png",
+    demoLink: "https://matheusborgesdev.github.io/ignite-feed/",
+    gitLink: "https://github.com/MatheusBorgesDev/ignite-feed",
+    introEn: "Like and comment in a social media template",
+    introBr: "Curta e comente em um modelo de mídia social",
+    descriptionEn: `A social media website template that allows you to comment and like on posts.
+
+Project designed to develop skills in:
+  - React+Vite
+  - Typescript
+  - States,
+  - Principle of immutability,
+  - Properties,
+  - Hooks`,
+    descriptionBr: `Um modelo de página de mídia social que permite comentar e curtir nos posts.
+    
+Projeto feito para desenvolver conhecimentos em:
+  - React+Vite
+  - Typescript
+  - Estados,
+  - Princípio da imutabilidade,
+  - Propriedades,
+  - Hooks`,
+  },
+
+  {
     id: "voice-notes",
     name: "Voice Notes",
-    techs: ["react", "typescript", "tailwind"],
+    techs: ["react", "vite", "typescript", "tailwind"],
     image: "voice-notes.png",
     demoLink: "https://matheusborgesdev.github.io/Voice-Notes",
     gitLink: "https://github.com/MatheusBorgesDev/Voice-Notes",
@@ -11,14 +71,14 @@ const projectsData = [
     descriptionEn: `Application created to save notes using voice, by browser's native speech recognition API.
 
 Project designed to develop skills in:
-  - React
+  - React+Vite
   - Typescript
   - Tailwind
   - Speech recognition API`,
     descriptionBr: `Aplicação criada para guardar notas utilizando voz, através da API de reconhecimento de voz nativa do navegador.
     
 Projeto feito para desenvolver conhecimentos em:
-  - React
+  - React+Vite
   - Typescript
   - Tailwind
   - Speech recognition API`,
