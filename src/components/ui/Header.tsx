@@ -1,5 +1,13 @@
 "use client";
 
+import React, { useState, MouseEventHandler } from "react";
+
+import { useTranslation } from "react-i18next";
+import i18n from "../../utils/i18n";
+
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+
 import {
   ChevronsUpIcon,
   CircleUserIcon,
@@ -10,15 +18,11 @@ import {
   PresentationIcon,
   SunIcon,
 } from "lucide-react";
+
 import { Card } from "./card";
-import Logo from "./Logo";
-import Link from "next/link";
-import React, { useState, MouseEventHandler } from "react";
-import ScrollLink from "./ScrollLink";
+import { Logo } from "./logo";
+import { ScrollLink } from "./scroll-link";
 import { Separator } from "./separator";
-import { usePathname } from "next/navigation";
-import { useTranslation } from "react-i18next";
-import i18n from "../../utils/i18n";
 import { Button } from "./button";
 
 interface HeaderProps {
@@ -26,7 +30,7 @@ interface HeaderProps {
   darkMode: boolean;
 }
 
-const Header = ({ toggleDarkMode, darkMode }: HeaderProps) => {
+export function Header({ toggleDarkMode, darkMode }: HeaderProps) {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isEnglish, setIsEnglish] = useState(true);
 
@@ -120,6 +124,6 @@ const Header = ({ toggleDarkMode, darkMode }: HeaderProps) => {
       </div>
     </Card>
   );
-};
+}
 
 export default Header;

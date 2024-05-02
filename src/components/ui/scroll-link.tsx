@@ -1,12 +1,13 @@
-import { Button } from "./button";
 import { ReactNode } from "react";
+
+import { Button } from "./button";
 
 interface ScrollLinkProps {
   pageElement: string;
   children: ReactNode;
 }
 
-const ScrollLink = ({ pageElement, children }: ScrollLinkProps) => {
+export function ScrollLink({ pageElement, children }: ScrollLinkProps) {
   const scrollToElement = () => {
     const targetElement = document.getElementById(pageElement);
     if (targetElement) {
@@ -24,6 +25,4 @@ const ScrollLink = ({ pageElement, children }: ScrollLinkProps) => {
       {children}
     </Button>
   );
-};
-
-export default ScrollLink;
+}

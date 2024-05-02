@@ -1,7 +1,8 @@
 import Image from "next/image";
-import Contacts from "./Contacts";
 
-const Profile = () => {
+import { Contacts } from "./contacts";
+
+export function Profile() {
   return (
     <div className="flex flex-col justify-center items-center relative mb-12">
       <div>
@@ -22,6 +23,4 @@ const Profile = () => {
       </div>
     </div>
   );
-};
-
-export default Profile;
+}

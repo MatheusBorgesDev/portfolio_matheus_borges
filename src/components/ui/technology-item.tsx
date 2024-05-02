@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import { Badge } from "./badge";
 
 interface TechnologyItemProps {
@@ -6,7 +7,7 @@ interface TechnologyItemProps {
   techName: string;
 }
 
-const TechnologyItem = ({ imgUrl, techName }: TechnologyItemProps) => {
+export function TechnologyItem({ imgUrl, techName }: TechnologyItemProps) {
   return (
     <Badge className="flex flex-col rounded-xl bg-transparent h-[80px] w-[80px] items-center justify-center hover:bg-transparent">
       <Image
@@ -20,6 +21,4 @@ const TechnologyItem = ({ imgUrl, techName }: TechnologyItemProps) => {
       <p className="text-secondary">{techName}</p>
     </Badge>
   );
-};
-
-export default TechnologyItem;
+}

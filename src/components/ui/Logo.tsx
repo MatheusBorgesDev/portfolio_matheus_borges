@@ -1,4 +1,4 @@
-const Logo = () => {
+export function Logo() {
   return (
     <div>
       <h2 className="text-primary font-bold text-[1.5rem] md:text-[2rem]">
@@ -7,6 +7,4 @@ const Logo = () => {
       </h2>
     </div>
   );
-};
-
-export default Logo;
+}

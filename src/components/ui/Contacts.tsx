@@ -1,14 +1,16 @@
 import React, { ReactNode } from "react";
-import { Button } from "./button";
+
 import Link from "next/link";
 import Image from "next/image";
+
+import { Button } from "./button";
 
 interface ContactItemProps {
   children: ReactNode;
   contactLink: string;
 }
 
-const Contacts = () => {
+export function Contacts() {
   const ContactItem = ({ children, contactLink }: ContactItemProps) => {
     return (
       <Link href={`${contactLink}`} target="_blank">
@@ -66,6 +68,4 @@ const Contacts = () => {
       </ContactItem>
     </div>
   );
-};
-
-export default Contacts;
+}

@@ -1,15 +1,18 @@
+import { useTranslation } from "react-i18next";
+
 import Image from "next/image";
-import { Card } from "./card";
-import { Button } from "./button";
 import Link from "next/link";
+
 import {
   ArrowLeft,
   ArrowUpRightIcon,
   GithubIcon,
   GlobeIcon,
 } from "lucide-react";
+
+import { Card } from "./card";
+import { Button } from "./button";
 import { Dialog, DialogContent, DialogTrigger, DialogClose } from "./dialog";
-import { useTranslation } from "react-i18next";
 
 interface ProjectItemProps {
   project: {
@@ -24,7 +27,7 @@ interface ProjectItemProps {
   };
 }
 
-const ProjectItem = ({ project }: ProjectItemProps) => {
+export function ProjectItem({ project }: ProjectItemProps) {
   const { t } = useTranslation();
 
   return (
@@ -142,6 +145,4 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
       </DialogContent>
     </Dialog>
   );
-};
-
-export default ProjectItem;
+}

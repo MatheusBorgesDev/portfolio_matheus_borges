@@ -1,14 +1,15 @@
 "use client";
 
-import { Button } from "./button";
 import { ReactNode } from "react";
+
+import { Button } from "./button";
 
 interface ScrollButtonProps {
   pageElement: string;
   children: ReactNode;
 }
 
-const ScrollButton = ({ pageElement, children }: ScrollButtonProps) => {
+export function ScrollButton({ pageElement, children }: ScrollButtonProps) {
   const scrollToElement = () => {
     const targetElement = document.getElementById(pageElement);
     if (targetElement) {
@@ -27,6 +28,4 @@ const ScrollButton = ({ pageElement, children }: ScrollButtonProps) => {
       </Button>
     </div>
   );
-};
-
-export default ScrollButton;
+}

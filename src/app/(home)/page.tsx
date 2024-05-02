@@ -1,10 +1,21 @@
 "use client";
 
-import Profile from "@/components/ui/Profile";
-import ProjectItem from "@/components/ui/ProjectItem";
-import ScrollButton from "@/components/ui/ScrollButton";
-import TechnologiesField from "@/components/ui/TechnologiesField";
+import { useTranslation } from "react-i18next";
+import i18n from "../../utils/i18n";
+
+import projectsData from "@/utils/projectsData";
+
+import Image from "next/image";
+import Link from "next/link";
+
+import { ArrowRight, ArrowUp } from "lucide-react";
+
+import { Profile } from "@/components/ui/profile";
+import { ProjectItem } from "@/components/ui/project-item";
+import { ScrollButton } from "@/components/ui/scroll-button";
+import { TechnologiesField } from "@/components/ui/technologies-field";
 import { Button } from "@/components/ui/button";
+import { Contacts } from "@/components/ui/contacts";
 import {
   Carousel,
   CarouselContent,
@@ -12,15 +23,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { ArrowRight, ArrowUp } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import projectsData from "@/utils/projectsData";
-import Contacts from "@/components/ui/Contacts";
-import { useTranslation } from "react-i18next";
-import i18n from "../../utils/i18n";
 
 export default function Home() {
   const { t } = useTranslation();

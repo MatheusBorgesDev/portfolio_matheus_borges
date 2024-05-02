@@ -1,5 +1,7 @@
 import { useRouter } from "next/navigation";
+
 import { ArrowLeft } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 
 interface BackButtonProps {
@@ -7,7 +9,7 @@ interface BackButtonProps {
   children?: React.ReactNode;
 }
 
-const BackButton = ({ variant, children }: BackButtonProps) => {
+export function BackButton({ variant, children }: BackButtonProps) {
   const router = useRouter();
 
   const handleGoBack = () => {
@@ -19,6 +21,4 @@ const BackButton = ({ variant, children }: BackButtonProps) => {
       {children || <ArrowLeft className="text-background" />}
     </Button>
   );
-};
-
-export default BackButton;
+}
