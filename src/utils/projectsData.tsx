@@ -1,5 +1,35 @@
 const projectsData = [
   {
+    id: "pomodoro-timer",
+    name: "Pomodoro",
+    techs: ["react", "vite", "typescript", "styled-components"],
+    image: "pomodoro-timer.png",
+    demoLink:
+      "https://pomodoro-timer-4fgp1wl07-matheusborgesdevs-projects.vercel.app/",
+    gitLink: "https://github.com/MatheusBorgesDev/2-do-list",
+    introEn: "Set times and control your tasks",
+    introBr: "Defina a duração e controle suas tarefas",
+    descriptionEn: `Application created to set the time for a task and track its progress through history.
+
+Project designed to develop knowledge of:
+  - Context API
+  - Reducers
+  - React Hook Form
+  - Zod
+  - Styled components
+  - React Router DOM`,
+    descriptionBr: `Aplicação criada para definir o tempo de uma tarefa e acompanhar seu progresso através do histórico.
+    
+Projeto feito para desenvolver conhecimentos em:
+  - Context API
+  - Reducers
+  - React Hook Form
+  - Zod
+  - Styled components
+  - React Router DOM`,
+  },
+
+  {
     id: "2-do-list",
     name: "2Do List",
     techs: ["react", "vite", "typescript", "tailwind"],
