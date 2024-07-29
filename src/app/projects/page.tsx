@@ -1,10 +1,14 @@
 "use client";
-import ProjectItem from "@/components/ui/project-item";
-import ScrollButton from "@/components/ui/scroll-button";
-import projectsData from "@/utils/projectsData";
-import { ArrowUp } from "lucide-react";
-import { useTranslation } from "react-i18next";
+
 import i18n from "../../utils/i18n";
+import { useTranslation } from "react-i18next";
+
+import { ArrowUp } from "lucide-react";
+
+import projectsData from "@/utils/projectsData";
+
+import { ProjectItem } from "@/components/ui/project-item";
+import { ScrollButton } from "@/components/ui/scroll-button";
 
 const Projects = () => {
   const { t } = useTranslation();
