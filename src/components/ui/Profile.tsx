@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { Contacts } from "./contacts";
 
-export function Profile() {
+export const Profile = () => {
   return (
     <div className="flex flex-col justify-center items-center relative mb-12">
       <div>
@@ -23,4 +23,4 @@ export function Profile() {
       </div>
     </div>
   );
-}
+};

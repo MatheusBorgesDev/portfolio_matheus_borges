@@ -10,12 +10,12 @@ import Link from "next/link";
 
 import { ArrowRight, ArrowUp } from "lucide-react";
 
+import { Button } from "@/components/ui/button";
 import { Profile } from "@/components/ui/profile";
+import { Contacts } from "@/components/ui/contacts";
 import { ProjectItem } from "@/components/ui/project-item";
 import { ScrollButton } from "@/components/ui/scroll-button";
 import { TechnologiesField } from "@/components/ui/technologies-field";
-import { Button } from "@/components/ui/button";
-import { Contacts } from "@/components/ui/contacts";
 import {
   Carousel,
   CarouselContent,
